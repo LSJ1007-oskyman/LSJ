@@ -75,8 +75,8 @@ public class Variable {
 //		2. 여러가지 자료형의 데이터를 모두 저장할 수 있다.
 //		3. 동적으로 공간의 크기를 늘릴 수 있다.
 		
-//		List list = new List();   //오류발생 list자체적으로는 객체생성불가
-		List list = new ArrayList();
+//		List list = new List();   //오류발생 list인터페이스이기때문에 자체적으로는 객체생성불가
+		List list = new ArrayList(); //자동 형변환 /UP casting
 		list.add(30);
 		list.add(3.14);
 		list.add('j');
