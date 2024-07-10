@@ -1,0 +1,26 @@
+class Computer {
+	int sum2(int ... values)
+	{
+		int sum=0;
+		
+		for(int i=0; i<values.length; i++)
+		{
+			sum+=values[i];
+		}
+		
+		return sum;
+	}
+}
+
+public class ComputerEx {
+
+	public static void main(String[] args) {
+		int result3 = myCom.sum2(1,2,3);
+		System.out.println("result3: "+result3);
+		
+		int result4 = myCom.sum2(1,2,3,4,5);
+		System.out.println("result4: "+result4);
+	}
+}
+
+여기서 ...은 넘겨준 매개변수의 수에 따라서 자동으로 배열을 생성해 그것을 매개값을 사용한다는 의미이다.
