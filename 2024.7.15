@@ -1,0 +1,13 @@
+박싱(Boxing) : heap메모리를 박스로 생각하고, stack메모리에 저장된 10을 heap메모리에 복사하는것.
+언박싱(unboxing) : heap메모리에 있는 데이토를 stack메모리로 가져오는 것.
+
+자료형변환: "20" ->20 parseInt하는것과 같은 결과를 보여줌
+String s ="20";
+Integer num02 = new Integer(s); // 박싱
+int n02 = num02.intValue();
+
+Integer obj = 100;//본래 Integer객체에 기본자료형을 담을수 없다.->하지만 자동언박싱 기능으로 가능해짐
+
+자료형 변환 : "42.195" ->42.195
+Double d2 = new Double("42.195");//박싱
+Double d22 = "42.195"->오류 발생 string형을 Double객체에 자동박싱은 안된다
