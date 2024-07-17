@@ -1,4 +1,4 @@
-package p2024_07_15.EX00;
+package p2024_07_17;
 
 class Point2D{
 	private int x;
