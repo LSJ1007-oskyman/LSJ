@@ -1,0 +1,24 @@
+class Vehicle{
+	public void run() {
+		System.out.println("차량이 달립니다.");
+	}
+}
+
+class Driver{
+	public void Driver(Vehicle vehical) { //업캐스팅을 통해서 자동형변환을 하여 매개변수를 받음
+		vehical.run();
+	}
+}
+
+class Bus extends Vehicle{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("버스를 달립니다.");
+	}
+	
+}
+
+Bus bus = new Bus();
+driver.Driver(bus);<---업캐스팅을 통해서 자동형변환을 하여 매개변수를 줌
