@@ -15,3 +15,14 @@ Thread클래스로 객체를 한번더 생성해야 실행이 된다.
 
 Thread사용방식이 2가지인 이유
 ->thread클래스를 상속받는 경우에 다른 클래스도 상속받아써야하는 경우가 있다. 자바는 다중상속을 허용하지 않으므로 이 경우 Runnable 인터페이스를 사용해야한다.
+
+스레드 동기화를 위해서 synchronized메소드를 사용
+1. public synchronized void method() {
+   }
+2. public void method(){
+    //여러스레드 실행가능 영역
+    synchronized(공유객체){
+    임계영역
+    }
+    //여러스레드 실행가능 영역
+  }
