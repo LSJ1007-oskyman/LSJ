@@ -1,0 +1,14 @@
+Thread클래스로 상속받았을때는
+
+ThreadEnd tt = new ThreadEnd();
+tt.start();
+로 바로 실행이 가능하나
+
+
+Runnable인터페이스를 상속 받았을 때는
+
+RunnableTest tt = new RunnableTest();
+//Thread클래스로 객체를 한번더 생성해야 실행이 된다.
+thread t = new Thread(tt);
+t.start();
+Thread클래스로 객체를 한번더 생성해야 실행이 된다.
