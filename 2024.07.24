@@ -1,0 +1,43 @@
+InputStream -> read()메서드 사용시 1바이트를 읽어온다 ->한글은 깨진다
+InputStreamReader -> read()메서드 사용시 2바이트를 읽어온다
+
+InputStream is =System.in;
+InputStreamReader isr = new InputStreamReader(is);
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+바이트 스트림
+FileInputStream->파일의 끝까지 데이터를 읽어온다 ->파일의끝(EOF)를 만나면 -1을 반환함
+FileOutputStream
+
+문자 스트림
+FileReader->파일의 끝까지 데이터를 읽어온다 ->파일의끝(EOF)를 만나면 -1을 반환함
+FileWriter
+
+기본 데이터 타입을 유지하면서 입출력 처리 스트림
+DataInputStream
+DataOutputStream
+
+FileOutputStream fos = new FileOutputStream("파일이름");
+DataOutputStream dos = new DataOuputStream(fos);
+
+FileInputStream fis = new FileInputStream("파일이름");
+DataInputStream dis = new DataInputStream(fis);
+
+File - >파일지정 객체
+
+File temp = new File("c:/java01",temp);
+File tempFile = new File("test"); 
+
+
+객체의 직렬화는 객체의 내용을 바이트 단위로 변환하여 파일 혹은 네트워크를 통해서 송수신이 가능하도록 하는 것을 의미한다. 
+객체의 직렬화는 객체의 내용을 자바 I/O가 자동적으로 바이트 단위로 변환하여, 저장하고 복원하거나 네트워크로 전송할 수 있도록 기능을 제공해준다.
+
+객채화 지정 클래스 
+FileInputStream fis = new FileInputStream("파일이름");
+ObjectInputStream ois = new ObjectInputStream(fis);
+
+FileOutputStream fos = new FileOutputStream("파일이름");
+ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+직렬화할 객체는 Serializable 인터페이스를 상속받아야한다.
