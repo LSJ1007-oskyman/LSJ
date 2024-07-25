@@ -1,0 +1,129 @@
+이클립스에서 cmd창처럼 DB연동하는 방법
+1. Window ->show view -> others
+2.Data Management -> Data Source Explorer
+3.아래 Data Source Explorer에서 Database Connections->new
+4. DB선택->driver선택지 옆 아이콘 선택->name/type|jar List|propertied 3가지 각각 설정한 후에 test connection을 통해서 확인
+
+selct문을 실행하고 싶으면 excuteQuery()메서드를 통해서 ResultSet에 결과 값을 저장
+insert,update,delete를 실행하고 싶으면 executeUpdate()를 통해서 성공하면 성공한row값 만큼 int값을 리턴한다.
+public static void main(String[] args) {
+		String driver = "oracle.jdbc.driver.OracleDriver";<---오라클 드라이버 클래스의 위치를 저장
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";//데이터베이스의 위치를 저장// xe - >전역 데이터베이스
+		
+		Connection con = null; //데이터베이스 접속에 관련된 객체
+		Statement stmt = null; // sql문을 실행시켜주는 역할
+		ResultSet rs = null; //탐색한 결과를 가지는 rs값
+		
+		try {
+			
+			Class.forName(driver); //드라이버 가져오기
+			con = DriverManager.getConnection(url, "scott", "tiger");//드라이버를 통해서 DB권한 받기
+			
+			stmt = con.createStatement();//연결을 통해서 실행할 객체 준
+			
+//			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			
+			String sql = "select * from customer";
+			
+			System.out.println("번호\t이름\t이메일\t번호");
+			System.out.println("-----------------------------------");
+			
+			rs = stmt.executeQuery(sql); //select sql문 실행
+			
+			while(rs.next()) {//next():검색한 데이터를 1개씩 가져오는 역할->boolean형을 리턴하며 가져올게 없으면 false를 리턴함
+				int no=rs.getInt("no");
+				String name = rs.getString("name");
+				String email = rs.getString("email");
+				String tel = rs.getString("tel");
+				System.out.println(no+"\t"+name+"\t"+email+"\t"+tel);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rs !=null) rs.close();
+				if(stmt != null) stmt.close();
+				if(con != null) con.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public static void main(String[] args) {
+			String driver = "oracle.jdbc.driver.OracleDriver";
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";//xe - >전역 데이터베이스
+			
+			Connection con = null; //데이터베이스 접속에 관련된 객체
+			PreparedStatement pstmt = null; // sql문을 실행시켜주는 역할
+			ResultSet rs01 = null;			
+			ResultSet rs02 = null;
+			
+			int cnt=0;//회원수
+			
+			try {
+				
+				Class.forName(driver);
+				con = DriverManager.getConnection(url, "scott", "tiger");
+				
+				String sql = "select count(*) from customer";
+				
+				
+				pstmt=con.prepareStatement(sql);<---pstmt 연결완
+				rs01 = pstmt.executeQuery(); //select sql문 실행
+				if(rs01.next()) {
+					cnt = rs01.getInt(1);
+//					cnt = rs01.getInt("count(*));
+					
+				}
+				
+				System.out.println("총회원수: "+cnt);
+				
+				sql="select * from customer";
+				pstmt=con.prepareStatement(sql);
+				rs02 = pstmt.executeQuery(); //select sql문 실행
+				
+				System.out.println("번호\t이름\t이메일\t번호");
+				System.out.println("-----------------------------------");
+				
+				while(rs02.next()) {//next():검색한 데이터를 1개씩 가져오는 역할->boolean형을 리턴하며 가져올게 없으면 false를 리턴함
+					int no=rs02.getInt("no");
+					String name = rs02.getString("name");
+					String email = rs02.getString("email");
+					String tel = rs02.getString("tel");
+					System.out.println(no+"\t"+name+"\t"+email+"\t"+tel);
+				}
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if(rs02 !=null) rs02.close();
+					if(rs01 !=null) rs01.close();
+					if(pstmt != null) pstmt.close();
+					if(con != null) con.close();
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+String sql = "insert into customer values(?,?,?,?)";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, no);//<<----------첫번째 매개변수는 물음표의 위치 2번째는 넣을 변수값
+			pstmt.setString(2, name);
+			pstmt.setString(3, email);
+			pstmt.setString(4, tel);
+
+
+ 
