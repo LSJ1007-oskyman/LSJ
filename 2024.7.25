@@ -6,6 +6,17 @@
 
 selct문을 실행하고 싶으면 excuteQuery()메서드를 통해서 ResultSet에 결과 값을 저장
 insert,update,delete를 실행하고 싶으면 executeUpdate()를 통해서 성공하면 성공한row값 만큼 int값을 리턴한다.
+
+
+
+
+
+
+
+
+
+
+
 public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";<---오라클 드라이버 클래스의 위치를 저장
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";//데이터베이스의 위치를 저장// xe - >전역 데이터베이스
