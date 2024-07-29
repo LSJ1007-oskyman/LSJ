@@ -2,3 +2,5 @@
 숫자 자료형           number                      int
 문자 자료형           varchar2                    varchar
 1씩증가              sequence                     auto_increment
+현재시간              SYSDATE                     SYSDATE,now
+
