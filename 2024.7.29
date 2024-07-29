@@ -1,0 +1,4 @@
+                     oracle                      mysql
+숫자 자료형           number                      int
+문자 자료형           varchar2                    varchar
+1씩증가              sequence                     auto_increment
