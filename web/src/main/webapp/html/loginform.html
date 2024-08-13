@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>loginform</title>
+</head>
+<body>
+<!-- form태크의 속성
+ method : 값을 전달하는 방식을 설정하는 속성(get or post)
+ action : 값이 전달될 파일명을 설정
+-->
+<!-- input태크의 속성
+	 size : 입력창의 크기 설정
+	 maxlength : 최대 입력 가능한 글자수 설정
+	 autofocus : 자동 포커스 기능
+	 id : 각 양식의 태그를 구분하기 위한 역할
+	 name : 값을 전단하기 위한 변수 역할  --넘거가는 곳(웹프로그램)에 id라는 변수에 값을 넘김 
+	 required : 입력 양식에 대한 필수 입력 검사
+-->
+	<form method="post" action="login.jsp">
+	<table border ="1" width = "350" align = "center">
+		<caption>로그인</caption>
+		<tr>
+			<th>ID</th>
+			<td>
+				<input type="text" size="20"
+								   maxlength="10"
+								   autofocus="autofocus"
+								   id="id"
+								   name="id"
+								   required="required">
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td>
+				<input type="password" size="20"
+								   	   maxlength="10"
+								       id="passwd"
+								       name="passwd"
+								       required="required">
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center>
+				<input type=submit value="로그인">
+				<input type="reset" value="취소">
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
