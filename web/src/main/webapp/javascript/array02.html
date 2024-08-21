@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	var num =['사당','교대','방배','강남']
+	document.write(num+"<br>")
+	document.write(typeof(num)+"<br>")
+	
+	//join():문자('-')를 기준으로 배열 원소값들을 하나의 문자로 결합해준다.
+	document.write(num.join('-')+"<br>");
+	document.write(typeof(num.join('-'))+"<br>")
+	
+	//reverse():배열 연소 값들의 순서를 반대로 바꾸어 주는 함수.
+	//원본 배열의 순서도 반대로 바뀐다.
+	document.write(num.reverse()+"<br>");
+	document.write(num+"<br>")
+	
+	//sort(): 배열의 원소값들을 오름차순으로 정렬(문자: 사전순 정렬)
+	document.write(num.sort()+"<br>");
+	document.write(num+"<br>")
+	
+	// 배열의 원소값들을 내림차순으로 정렬해보자
+	document.write(num.sort().reverse()+"<br>");
+	document.write(num+"<br>")
+	
+</script>
+
+</body>
+</html>
