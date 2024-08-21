@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="user-scalable=no,initial-scale=1" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <title>목록</title>
+
+<script>
+	history.scrollRestoration = "auto";
+</script>
 <style>
 a:link {
 	text-decoration: underline;
@@ -19,18 +26,22 @@ a:hover {
 body {
 	background-color: #E7E7E8;
 	background-image: url('BackgroundFront.png'), url('BackgroundBack.png');
-	background-size: 100% 85px;
+	background-size: 100% 105px;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 }
 
 #header {
+	position: relative;
+	top: 15px;
 	width: 800px;
 	margin: 0 auto;
 }
 
 #totalWrap {
 	width: 900px;
+	position: relative;
+	top: 50px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -43,7 +54,8 @@ body {
 }
 
 #nav {
-	background-color: gray;
+	z-index: 1;
+	background-color: white;
 	position: fixed;
 	left: 20px;
 	width: 350px;
@@ -71,7 +83,6 @@ body {
 	padding: 20px;
 }
 
-
 @media ( min-width : 900px) and (max-width: 1199px) {
 	/* 스마트폰 사이즈에서는 전부 해제합니다. */
 	body {
@@ -89,8 +100,6 @@ body {
 		float: left;
 	}
 }
-
-
 
 @media ( min-width : 1200px) and (max-width: 1600px) {
 	/* 스마트폰 사이즈에서는 전부 해제합니다. */
@@ -158,7 +167,7 @@ body {
 				<ul>
 					<li><a class="nav-link" href="#anchor">anchor</a></li>
 					<li><a class="nav-link" href="#image">image</a></li>
-					<li><a class="nav-link" href="#outer">외부스크립창 띄위기</a></li>
+					<li><a class="nav-link" href="#outer">외부스크립창 띄우기</a></li>
 					<li><a class="nav-link" href="#list">List</a></li>
 					<li><a class="nav-link" href="#table">Table</a></li>
 					<li><a class="nav-link" href="#basicform">회원관리폼 만들기에 필요한 요소들</a></li>
@@ -173,7 +182,7 @@ body {
 					<li><a class="nav-link" href="#overflow">Overflow</a></li>
 					<li><a class="nav-link" href="#float">Float</a></li>
 					<li><a class="nav-link" href="#shadow">Shadow</a></li>
-					<li><a class="nav-link" href="#media">>Media</a></li>
+					<li><a class="nav-link" href="#media">Media</a></li>
 				</ul>
 			</li>
 			<li>bootstrap
@@ -197,6 +206,8 @@ body {
 					<li><a class="nav-link" href="#jsoperation">연산자</a></li>
 					<li><a class="nav-link" href="#jscondition">조건문</a></li>
 					<li><a class="nav-link" href="#jsfunction">사용자정의함수</a></li>
+					<li><a class="nav-link" href="#js_array">배열</a></li>
+					<li><a class="nav-link" href="#js_embedded_object">내장객체</a></li>
 				</ul>
 			</li>
 		</ol>
@@ -654,7 +665,7 @@ body {
 						<li><p>select는 multiple속성을 통해서 다중 선택이 가능하다.</p></li>
 					</ul>
 				</div>
-				<div class="bootstraptab"id="content2">
+				<div class="bootstraptab" id="content2">
 					<a href="#" onclick="location.href='tab.html'">tab</a><br>
 					<p>설명: tab 사용 방법</p>
 					<p>추가적인 설명</p>
@@ -724,7 +735,7 @@ body {
 					<ul>
 						<li><p>alert()</p></li>
 						<li><p>confirm()</p></li>
-						<li><p>prompt()</p></li>
+						<li><p>prompt(메시지,초기값)</p></li>
 					</ul>
 					<p>추가적인 설명</p>
 					<ul>
@@ -767,9 +778,9 @@ body {
 					</ul>
 				</div>
 				<div id="jscondition" class="content2">
-					<a href="javascript/if01.html" onclick="location.href='if01.html'">if01</a><br>
-					<a href="javascript/if02.html" onclick="location.href='if02.html'">if02</a><br>
-					<a href="javascript/if03.html" onclick="location.href='if03.html'">if03</a><br>
+					<a href="javascript/if01.html">if01</a><br>
+					<a href="javascript/if02.html">if02</a><br>
+					<a href="javascript/if03.html">if03</a><br>
 					<a href="javascript/switch01.html"
 						onclick="location.href='switch01.html'">switch01</a><br> <a
 						href="javascript/switch02.html"
@@ -783,16 +794,16 @@ body {
 					</ul>
 				</div>
 				<div id="jsloop" class="content2">
-					<a href="javascript/for01.html" onclick="location.href='for01.html'">for01</a><br>
-					<a href="javascript/for02.html" onclick="location.href='for02.html'">for02</a><br>
-					<a href="javascript/for03.html" onclick="location.href='for03.html'">for03</a><br>
-					<a href="javascript/for04.html" onclick="location.href='for04.html'">for04</a><br>
-					<a href="javascript/for05.html" onclick="location.href='for05.html'">for05</a><br>
-					<a href="javascript/for06.html" onclick="location.href='for06.html'">for06</a><br>
-					<a href="javascript/while01.html" onclick="location.href='while01.html'">while01</a><br>
-					<a href="javascript/while02.html" onclick="location.href='while02.html'">while02</a><br>
-					<a href="javascript/dowhile01.html" onclick="location.href='dowhile01.html'">dowhile01</a><br>
-					<a href="javascript/dowhile02.html" onclick="location.href='dowhile02.html'">dowhile02</a><br>
+					<a href="javascript/for01.html">for01</a><br>
+					<a href="javascript/for02.html">for02</a><br>
+					<a href="javascript/for03.html">for03</a><br> 
+					<a href="javascript/for04.html">for04</a><br>
+					<a href="javascript/for05.html">for05</a><br> 
+					<a href="javascript/for06.html">for06</a><br>
+					<a href="javascript/while01.html">while01</a><br> 
+					<a href="javascript/while02.html">while02</a><br> 
+					<a href="javascript/dowhile01.html">dowhile01</a><br> 
+					<a href="javascript/dowhile02.html">dowhile02</a><br>
 					<p>설명: 반복문</p>
 					<p>추가적인 설명</p>
 					<ul>
@@ -800,17 +811,100 @@ body {
 					</ul>
 				</div>
 				<div id="jsfunction" class="content2">
-					<a href="javascript/function01.html" onclick="location.href='function01.html'">function01</a><br>
-					<a href="javascript/function02.html" onclick="location.href='function02.html'">function02</a><br>
-					<a href="javascript/function03.html" onclick="location.href='function03.html'">function03</a><br>
-					<a href="javascript/function04.html" onclick="location.href='function04.html'">function04</a><br>
+					<a href="javascript/function01.html">function01</a><br>
+					<a href="javascript/function02.html">function02</a><br>
+					<a href="javascript/function03.html">function03</a><br>
+					<a href="javascript/function04.html">function04</a><br>
+					<a href="javascript/function05.html">function05</a><br>
+					<a href="javascript/builtin.html">builtin</a><br>
 					<p>설명: 사용자정의함수</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>parseInt</p></li>
+						<li><p>Number</p></li>
+						<li><p>String</p></li>
+						<li><p>eval</p></li>
+						<li><p>isNaN</p></li>
+					</ul>
 					<p>추가적인 설명</p>
 					<ul>
 						<li><p>자바스크립트에서 함수를 만들때는 function을 사용해서 만든다.</p></li>
 						<li><p>자바스크립트의 함수명은 대.소문자를 구분한다.</p></li>
-						<li><p>자바스크립트는 인터프리트방식의 언어로서 함수 호출과 함수정의가 서로 다른 스크립트에서 코딩될때 함수호출이 함수정의보다 먼저나오면 함수가 실행되지 않는다.(function01)</p></li>
-						<li><p>함수 호출과 함수정의가 서로 같은 스크립트에서 코딩될때 함수호출이 함수정의보다 먼저나와도 실행된다.즉 함수정의의 위치 상관없이 호출가능하다.이를 호이스팅기능이라고 부른다.(function01)</p></li>
+						<li><p>자바스크립트는 인터프리트방식의 언어로서 함수 호출과 함수정의가 서로 다른 스크립트에서
+								코딩될때 함수호출이 함수정의보다 먼저나오면 함수가 실행되지 않는다.(function01)</p></li>
+						<li><p>함수 호출과 함수정의가 서로 같은 스크립트에서 코딩될때 함수호출이 함수정의보다 먼저나와도
+								실행된다.즉 함수정의의 위치 상관없이 호출가능하다.이를 호이스팅기능이라고 부른다.(function01)</p></li>
+						<li><p>parseInt는 문자형 데이터를 정수형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>parseFloatt는 문자형 데이터를 실수형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>Number는 문자형 데이터를 숫자형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>String는 숫자형 데이터를 문자형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>eval는 문자형 산술식을 연산 수행해준다.(builtin)</p></li>
+						<li><p>isNaN는 숫자가 아니면(문자가 포함되면) true값을 리턴하는
+								함수이다.(builtin)</p></li>
+					</ul>
+				</div>
+				<div id="js_array" class="content2">
+					<a href="javascript/array01.html">array01</a><br>
+					<a href="javascript/array02.html">array02</a><br>
+					<a href="javascript/array03.html">array03</a><br>
+					<p>설명: 배열</p>
+					<p>사용하는 메서드</p>
+					<ul>
+						<li><p>length</p></li>
+						<li><p>join</p></li>
+						<li><p>reverse</p></li>
+						<li><p>sort</p></li>
+						<li><p>slice(start index,end index)</p></li>
+						<li><p>concat</p></li>
+						<li><p>pop</p></li>
+						<li><p>push</p></li>
+						<li><p>shift</p></li>
+						<li><p>unshift</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>length 메서드를 통해서 배열의 크기를 알 수 있다.(array01)</p></li>
+						<li><p>자료형을 써서 선언하는게 아니여서 초기화가 이루어지진 않는다.(array01)</p></li>
+						<li><p>join함수 사용시 결과값은 String형태이다.(array02)</p></li>
+						<li><p>reverse함수 사용시 원본 배열 자체도 순서가 바뀐다.(array02)</p></li>
+						<li><p>sort함수 사용시 원본 배열 자체도 순서가 바뀐다.(array02)</p></li>
+						<li><p>slice함수 start index부터 end index-1까지 출력한다.(array03)</p></li>
+						<li><p>pop함수 배열의 마지막 원소를 삭제 시켜준다.(array03)</p></li>
+						<li><p>push함수 배열의 마지막 인덱스에 새로운 데이터를 삽입 해주는 함수이다.(array03)</p></li>
+						<li><p>shift함수는 배열의 첫번째 원소를 삭제 해주는 함수이다.(array03)</p></li>
+						<li><p>unshift함수는 배열의 첫번째 인덱스에 새로운 데이터를 삽입 해주는 함수이다.(array03)</p></li>
+					</ul>
+				</div>
+				<div id="js_embedded_object" class="content2">
+					<a href="javascript/date01.html">date01</a><br> 
+					<a href="javascript/date02.html">date02</a><br> 
+					<p>설명: 내장객체</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>Date()</p></li>
+						<li><p>document.getElementById(id값)</p></li>
+						<li><p>setTimeout(시행할 명령,1/1000초)</p></li>
+						<li><p>clearTimeout()</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>Date메소드</p>
+							<ul>
+								<li><p>getFullYear():년도를 구해온다.</p></li>
+								<li><p>getMonth():월을 구해오는데 0~11이여서 +1해야 원하는 월을 구해온다.</p></li>
+								<li><p>getDate():일을 구해온다.</p></li>
+								<li><p>getHours():시간을 구해온다.</p></li>
+								<li><p>getMinutes():분을 구해온다.</p></li>
+								<li><p>getSeconds():초를 구해온다.</p></li>
+								<li><p>getDay():요일에 맞는 숫자를 구해오는데 일요일부터 0이고 토요일이 6이다.원하는 요일을 출력하고싶으면 요일 배열을 만들어서 숫자에 맞게 출력시켜야한다.</p></li>
+							</ul>
+						</li>
+						<li>document.getElementById를 이용해 원하는 태그의 id값을 통해서 태그를 불러와서 속성값을 바꿀수 있다.(Date02)</li>
+						<li>setTimeout(시행할 명령,1/1000초)은 1/1000초 마다 시행할 명령을 반복하는 함수이다.window객체가 제공한다.(Date02)</li>
+						<li>clearTimeout()함수는 setTimeout() 명령을 멈추게하는 함수이다.(Date02)</li>
+						<li>clearTimeout()함수로 원하는 setTimeout() 명령을 멈추게하려면 setTimeout()자체를 하나의 변수에 넣어서 clearTimeout()에 넣는다.(Date02)</li>
+						<li>setTimeout()자체를 하나의 변수에 넣을때 변수 앞에 선언자 없이 하여 전역변수로 선언했다.(Date02)</li>
+						<li>onLoad이벤트를 통해서 바로 함수를 실행할 수 있다.(Date02)</li>
 					</ul>
 				</div>
 			</div>
