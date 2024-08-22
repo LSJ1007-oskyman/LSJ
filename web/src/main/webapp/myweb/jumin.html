@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jumin</title>
+<script>
+	
+	function check(){
+		var jj1 = document.getElementById('jumin1');
+		var jj2 = document.getElementById('jumin2');
+		var j1 = document.getElementById('jumin1').value;
+		var j2 = document.getElementById('jumin2').value;
+		var v =[2,3,4,5,6,7,8,9,2,3,4,5];
+		var sum=0;
+		
+		if(jj1.value.length!=6){
+			alert("앞자리 6자리를 입력해주세요")
+			return false;
+		};
+		
+		if(jj2.value.length!=7){
+			alert("뒷자리 7자리를 입력해주세요")
+			return false;
+		};
+		
+		for(var i=0;i<12;i++){
+			if(i<6){
+				sum+=(v[i]*j1.charAt(i));
+			}else if(i>=6){
+				sum+=(v[i]*j2.charAt(i-6));
+			}
+		}
+		
+		
+		var tempt=Number(sum)%11;
+		
+		var result=11-tempt;
+		if(result>=10){
+			result%=10;
+		}
+		
+		if(result == j2.charAt(6)) alert("검사 완료되었습니다.");
+		else alert("유효하지 않은 주민번호입니다.");
+	}
+	
+</script>
+</head>
+<body>
+<form>
+	주민번호:
+	<input type="text" size="6" maxlength="6" id=jumin1>-
+	<input type="text" size="7" maxlength="7" id=jumin2>
+	<button onclick="check()">검사</button>
+	<button>취소</button>
+</form>
+</body>
+</html>
