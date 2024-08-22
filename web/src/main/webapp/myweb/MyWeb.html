@@ -59,12 +59,12 @@ body {
 	position: fixed;
 	left: 20px;
 	width: 350px;
-	overflow: hidden;
+	overflow: scroll;
 	border: 1px solid;
 }
 
 #aside {
-	width: 130px;
+	width: 180px;
 	float: left;
 	margin: 15px;
 	text-align: center;
@@ -155,6 +155,13 @@ body {
 	}
 }
 </style>
+
+<script>
+		window.addEventListener("resize", function() {
+			var nav = document.getElementById('nav')
+			nav.style.height= (window.innerHeight-200)+"px";
+		})
+</script>
 </head>
 <body>
 	<div id="header">
@@ -170,7 +177,8 @@ body {
 					<li><a class="nav-link" href="#outer">외부스크립창 띄우기</a></li>
 					<li><a class="nav-link" href="#list">List</a></li>
 					<li><a class="nav-link" href="#table">Table</a></li>
-					<li><a class="nav-link" href="#basicform">회원관리폼 만들기에 필요한 요소들</a></li>
+					<li><a class="nav-link" href="#basicform">회원관리폼 만들기에 필요한
+							요소들</a></li>
 				</ul>
 			</li>
 			<li>CSS
@@ -208,6 +216,7 @@ body {
 					<li><a class="nav-link" href="#jsfunction">사용자정의함수</a></li>
 					<li><a class="nav-link" href="#js_array">배열</a></li>
 					<li><a class="nav-link" href="#js_embedded_object">내장객체</a></li>
+					<li><a class="nav-link" href="#js_event">이벤트</a></li>
 				</ul>
 			</li>
 		</ol>
@@ -215,7 +224,7 @@ body {
 	<div id="totalWrap">
 		<div id="wrap">
 			<div id="aside">
-				<h1>&nbsp;&nbsp;HTML</h1>
+				<h1>HTML</h1>
 			</div>
 			<!-- endofHTML -->
 			<div id="content">
@@ -361,7 +370,7 @@ body {
 		<!-- endofwrap -->
 		<div id="wrap">
 			<div id="aside">
-				<h1>&nbsp;&nbsp;CSS</h1>
+				<h1>CSS</h1>
 			</div>
 			<!-- endofcss -->
 			<div id="content">
@@ -665,7 +674,7 @@ body {
 						<li><p>select는 multiple속성을 통해서 다중 선택이 가능하다.</p></li>
 					</ul>
 				</div>
-				<div class="bootstraptab" id="content2">
+				<div id="bootstraptab" class="content2">
 					<a href="#" onclick="location.href='tab.html'">tab</a><br>
 					<p>설명: tab 사용 방법</p>
 					<p>추가적인 설명</p>
@@ -684,15 +693,12 @@ body {
 			<!-- end of aside -->
 			<div id="content">
 				<div id="jsbasic" class="content2">
-					<a href="javascript/first.html"
-						onclick="location.href='first.html'">first</a><br> <a
-						href="javascript/call.html" onclick="location.href='call.html'">call</a><br>
-					<a href="javascript/var.html" onclick="location.href='var.html'">var</a><br>
-					<a href="javascript/let.html" onclick="location.href='let.html'">let</a><br>
-					<a href="javascript/const.html"
-						onclick="location.href='const.html'">const</a><br> <a
-						href="javascript/variable.html"
-						onclick="location.href='variable.html'">variable</a><br>
+					<a href="javascript/first.html">first</a><br> <a
+						href="javascript/call.html">call</a><br> <a
+						href="javascript/var.html">var</a><br> <a
+						href="javascript/let.html">let</a><br> <a
+						href="javascript/const.html">const</a><br> <a
+						href="javascript/variable.html">variable</a><br>
 					<p>설명: javascript기초</p>
 					<p>추가적인 설명</p>
 					<ul>
@@ -724,12 +730,9 @@ body {
 					</ul>
 				</div>
 				<div id="jsembeddedfunction" class="content2">
-					<a href="javascript/alert.html"
-						onclick="location.href='alert.html'">alert</a><br> <a
-						href="javascript/confirm.html"
-						onclick="location.href='confirm.html'">confirm</a><br> <a
-						href="javascript/prompt.html"
-						onclick="location.href='prompt.html'">prompt</a><br>
+					<a href="javascript/alert.html">alert</a><br> <a
+						href="javascript/confirm.html">confirm</a><br> <a
+						href="javascript/prompt.html">prompt</a><br>
 					<p>설명: 내장함수</p>
 					<p>사용하는 함수</p>
 					<ul>
@@ -751,22 +754,14 @@ body {
 					</ul>
 				</div>
 				<div id="jsoperation" class="content2">
-					<a href="javascript/oper01.html"
-						onclick="location.href='oper01.html'">oper01</a><br> <a
-						href="javascript/oper02.html"
-						onclick="location.href='oper02.html'">oper02</a><br> <a
-						href="javascript/oper03.html"
-						onclick="location.href='oper03.html'">oper03</a><br> <a
-						href="javascript/oper04.html"
-						onclick="location.href='oper04.html'">oper04</a><br> <a
-						href="javascript/oper05.html"
-						onclick="location.href='oper05.html'">oper05</a><br> <a
-						href="javascript/oper06.html"
-						onclick="location.href='oper06.html'">oper06</a><br> <a
-						href="javascript/oper07.html"
-						onclick="location.href='oper07.html'">oper07</a><br> <a
-						href="javascript/oper08.html"
-						onclick="location.href='oper08.html'">oper08</a><br>
+					<a href="javascript/oper01.html">oper01</a><br> <a
+						href="javascript/oper02.html">oper02</a><br> <a
+						href="javascript/oper03.html">oper03</a><br> <a
+						href="javascript/oper04.html">oper04</a><br> <a
+						href="javascript/oper05.html">oper05</a><br> <a
+						href="javascript/oper06.html">oper06</a><br> <a
+						href="javascript/oper07.html">oper07</a><br> <a
+						href="javascript/oper08.html">oper08</a><br>
 					<p>설명: 연산자</p>
 					<p>추가적인 설명</p>
 					<ul>
@@ -778,13 +773,11 @@ body {
 					</ul>
 				</div>
 				<div id="jscondition" class="content2">
-					<a href="javascript/if01.html">if01</a><br>
-					<a href="javascript/if02.html">if02</a><br>
-					<a href="javascript/if03.html">if03</a><br>
-					<a href="javascript/switch01.html"
-						onclick="location.href='switch01.html'">switch01</a><br> <a
-						href="javascript/switch02.html"
-						onclick="location.href='switch02.html'">switch02</a><br>
+					<a href="javascript/if01.html">if01</a><br> <a
+						href="javascript/if02.html">if02</a><br> <a
+						href="javascript/if03.html">if03</a><br> <a
+						href="javascript/switch01.html">switch01</a><br> <a
+						href="javascript/switch02.html">switch02</a><br>
 					<p>설명: 조건문</p>
 					<p>추가적인 설명</p>
 					<ul>
@@ -794,16 +787,16 @@ body {
 					</ul>
 				</div>
 				<div id="jsloop" class="content2">
-					<a href="javascript/for01.html">for01</a><br>
-					<a href="javascript/for02.html">for02</a><br>
-					<a href="javascript/for03.html">for03</a><br> 
-					<a href="javascript/for04.html">for04</a><br>
-					<a href="javascript/for05.html">for05</a><br> 
-					<a href="javascript/for06.html">for06</a><br>
-					<a href="javascript/while01.html">while01</a><br> 
-					<a href="javascript/while02.html">while02</a><br> 
-					<a href="javascript/dowhile01.html">dowhile01</a><br> 
-					<a href="javascript/dowhile02.html">dowhile02</a><br>
+					<a href="javascript/for01.html">for01</a><br> <a
+						href="javascript/for02.html">for02</a><br> <a
+						href="javascript/for03.html">for03</a><br> <a
+						href="javascript/for04.html">for04</a><br> <a
+						href="javascript/for05.html">for05</a><br> <a
+						href="javascript/for06.html">for06</a><br> <a
+						href="javascript/while01.html">while01</a><br> <a
+						href="javascript/while02.html">while02</a><br> <a
+						href="javascript/dowhile01.html">dowhile01</a><br> <a
+						href="javascript/dowhile02.html">dowhile02</a><br>
 					<p>설명: 반복문</p>
 					<p>추가적인 설명</p>
 					<ul>
@@ -811,12 +804,12 @@ body {
 					</ul>
 				</div>
 				<div id="jsfunction" class="content2">
-					<a href="javascript/function01.html">function01</a><br>
-					<a href="javascript/function02.html">function02</a><br>
-					<a href="javascript/function03.html">function03</a><br>
-					<a href="javascript/function04.html">function04</a><br>
-					<a href="javascript/function05.html">function05</a><br>
-					<a href="javascript/builtin.html">builtin</a><br>
+					<a href="javascript/function01.html">function01</a><br> <a
+						href="javascript/function02.html">function02</a><br> <a
+						href="javascript/function03.html">function03</a><br> <a
+						href="javascript/function04.html">function04</a><br> <a
+						href="javascript/function05.html">function05</a><br> <a
+						href="javascript/builtin.html">builtin</a><br>
 					<p>설명: 사용자정의함수</p>
 					<p>사용하는 함수</p>
 					<ul>
@@ -844,9 +837,9 @@ body {
 					</ul>
 				</div>
 				<div id="js_array" class="content2">
-					<a href="javascript/array01.html">array01</a><br>
-					<a href="javascript/array02.html">array02</a><br>
-					<a href="javascript/array03.html">array03</a><br>
+					<a href="javascript/array01.html">array01</a><br> <a
+						href="javascript/array02.html">array02</a><br> <a
+						href="javascript/array03.html">array03</a><br>
 					<p>설명: 배열</p>
 					<p>사용하는 메서드</p>
 					<ul>
@@ -877,7 +870,14 @@ body {
 				</div>
 				<div id="js_embedded_object" class="content2">
 					<a href="javascript/date01.html">date01</a><br> 
-					<a href="javascript/date02.html">date02</a><br> 
+					<a href="javascript/date02.html">date02</a><br>
+					<a href="javascript/date03.html">date03</a><br>
+					<a href="javascript/math01.html">math01</a><br>
+					<a href="javascript/math02.html">math02</a><br>
+					<a href="javascript/string01.html">string01</a><br>
+					<a href="javascript/string02.html">string02</a><br>
+					<a href="javascript/string03.html">string03</a><br>
+					<a href="javascript/string04.html">string04</a><br>
 					<p>설명: 내장객체</p>
 					<p>사용하는 함수</p>
 					<ul>
@@ -885,6 +885,7 @@ body {
 						<li><p>document.getElementById(id값)</p></li>
 						<li><p>setTimeout(시행할 명령,1/1000초)</p></li>
 						<li><p>clearTimeout()</p></li>
+						<li><p>location.reload()</p></li>
 					</ul>
 					<p>추가적인 설명</p>
 					<ul>
@@ -896,15 +897,72 @@ body {
 								<li><p>getHours():시간을 구해온다.</p></li>
 								<li><p>getMinutes():분을 구해온다.</p></li>
 								<li><p>getSeconds():초를 구해온다.</p></li>
-								<li><p>getDay():요일에 맞는 숫자를 구해오는데 일요일부터 0이고 토요일이 6이다.원하는 요일을 출력하고싶으면 요일 배열을 만들어서 숫자에 맞게 출력시켜야한다.</p></li>
-							</ul>
-						</li>
-						<li>document.getElementById를 이용해 원하는 태그의 id값을 통해서 태그를 불러와서 속성값을 바꿀수 있다.(Date02)</li>
-						<li>setTimeout(시행할 명령,1/1000초)은 1/1000초 마다 시행할 명령을 반복하는 함수이다.window객체가 제공한다.(Date02)</li>
+								<li><p>getDay():요일에 맞는 숫자를 구해오는데 일요일부터 0이고 토요일이 6이다.원하는
+										요일을 출력하고싶으면 요일 배열을 만들어서 숫자에 맞게 출력시켜야한다.</p></li>
+							</ul></li>
+						<li>document.getElementById를 이용해 원하는 태그의 id값을 통해서 태그를 불러와서
+							속성값을 바꿀수 있다.(Date02)</li>
+						<li>setTimeout(시행할 명령,1/1000초)은 1/1000초 마다 시행할 명령을 반복하는
+							함수이다.window객체가 제공한다.(Date02)</li>
 						<li>clearTimeout()함수는 setTimeout() 명령을 멈추게하는 함수이다.(Date02)</li>
-						<li>clearTimeout()함수로 원하는 setTimeout() 명령을 멈추게하려면 setTimeout()자체를 하나의 변수에 넣어서 clearTimeout()에 넣는다.(Date02)</li>
-						<li>setTimeout()자체를 하나의 변수에 넣을때 변수 앞에 선언자 없이 하여 전역변수로 선언했다.(Date02)</li>
+						<li>clearTimeout()함수로 원하는 setTimeout() 명령을 멈추게하려면
+							setTimeout()자체를 하나의 변수에 넣어서 clearTimeout()에 넣는다.(Date02)</li>
+						<li>setTimeout()자체를 하나의 변수에 넣을때 변수 앞에 선언자 없이 하여 전역변수로
+							선언했다.(Date02)</li>
 						<li>onLoad이벤트를 통해서 바로 함수를 실행할 수 있다.(Date02)</li>
+						<li><p>Math속성,메소드</p>
+							<ul>
+								<li><p>Math.E:오일러상수</p></li>
+								<li><p>Math.PI: 파이.</p></li>
+								<li><p>Math.abs(): 절대값.</p></li>
+								<li><p>Math.max(),Math.min(): 최대값, 최소값.</p></li>
+								<li><p>Math.ceil(): 올림.</p></li>
+								<li><p>Math.round(): 반올림.</p></li>
+								<li><p>Math.floor(): 내림.</p></li>
+								<li><p>Math.random(): 난수.</p></li>
+								<li><p>Math.pow(밑,지수): 거듭제곱.</p></li>
+								<li><p>Math.sqrt(): 제곱근.</p></li>
+							</ul></li>
+						<li><p>location.reload()는 페이지를 새로고침해준다.</p></li>
+						<li><p>String속성,메소드</p>
+							<ul>
+								<li><p>length:길이를 구해온다</p></li>
+								<li><p>charAt() : 인덱스 번호의 문자를 추출</p></li>
+								<li><p>indexOf(찾는 문자,시작 인덱스) : 시작 인덱스 이후로 가장 먼저 나오는 문자의 인덱스 값을 구해온다.</p></li>
+								<li><p>lastIndexOf(찾는 문자): 찾는 문자를 뒤에서 부터 찾아와 그 인덱스 값을 리턴한다.</p></li>
+								<li><p>toUpperCase():대문자로 변환 해주는 함수.</p></li>
+								<li><p>toLowerCase():소문자로 변환 해주는 함수.</p></li>
+								<li><p>substring(start index, end index): start index에서 부터 end index-1인덱스 까지의 문자열을 추출한다.</p></li>
+								<li><p>substr(start index,추출할 문자열의 길이):start index에서 부터 원하는 길이의 문자열을 추출한다.</p></li>
+							</ul></li>
+					</ul>
+				</div>
+				<div id="js_event" class="content2">
+					<a href="javascript/select_id.html">select_id</a>
+					<a href="javascript/select_query.html">select_query</a>
+					<a href="javascript/select_all.html">select_all</a>
+					<a href="javascript/click.html">click</a>
+					<a href="javascript/focus01.html">focus01</a>
+					<a href="javascript/focus02.html">focus02</a>
+					<p>설명: 이벤트</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>document.getElementbyId(아이디값)</p></li>
+						<li><p>document.querySelector(선택자)</p></li>
+						<li><p>document.getElementbyName(이름)</p></li>
+						<li><p>document.getElementbyClassName(클래스)</p></li>
+						<li><p>document.querySelector(선택자)</p></li>
+						<li><p>onclick</p></li>
+						<li><p>focus</p></li>
+						<li><p>blur</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>html에서 태그는 보통 element라고 불린다.</p></li>
+						<li><p>html은 반드시 1개의 root element로 시작해야한다.</p></li>
+						<li><p>document.getElementbyId(아이디값),document.querySelector(선택자)는 한개의 element만 구해온다</p></li>
+						<li><p>document.getElementbyName(이름),document.getElementbyClassName(클래스),document.querySelector(선택자)는 여러개의 element를 구해온다. 이때 배열로 가져온다.</p></li>
+						<li><p>스크립트 상에 함수 위에다가 전역변수로서 Id값으로 element를 선언하면 javascript의 인터프리터적인 성격 때문에 정상적으로 인식되지 않는다.(focus01)</p></li>
 					</ul>
 				</div>
 			</div>
