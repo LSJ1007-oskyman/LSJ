@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus,blur이벤트</title>
+<script>
+	function id_focus(){
+		var id = document.getElementById('id');
+		id.value="";
+	}
+	
+	function id_blur(){
+		var id = document.getElementById('id');
+		id.value = id.defaultValue;
+		
+	}
+	
+	function passwd_focus(){
+		var passwd = document.getElementById('passwd');
+		passwd.value="";
+	}
+	
+	function passwd_blur(){
+		var passwd = document.getElementById('passwd');
+		passwd.value=passwd.defaultValue;
+	}
+	
+</script>
+</head>
+<body>
+<form>
+	아이디 : <input type="text" id="id" value="아이디 입력" onfocus="id_focus()" onblur="id_blur()"><br>
+	비밀번호 : <input type="text" id="passwd" value="비밀번호 입력" onfocus="passwd_focus()" onblur="passwd_blur()"><br>
+</form>
+</body>
+</html>
