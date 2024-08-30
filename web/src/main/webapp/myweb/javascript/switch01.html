@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch</title>
+</head>
+<body>
+<script>
+	//swithc~case문
+	//0~100점 사이의 점수르 입력 받아서 해당 학점을 출력하는 프로그램을 switch case문으로 작성하시오
+	
+	var s =Number(prompt("0~100점 사이의 점수를 입력하세요",""));
+	//parseInt : 문자를 정수형으로 변환해주는 함수
+	switch((parseInt(s/10)*10)){
+		case 100:alert("A학점");
+				break;
+		case 90:alert("A학점");
+				break;
+		case 80:alert("B학점");
+				break;
+		case 70:alert("C학점");
+				break;
+		case 60:alert("D학점");
+				break;
+		default: alert("F학점")
+	}
+</script>
+</body>
+</html>
