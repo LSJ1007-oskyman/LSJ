@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1" />
+<title>mystudy</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystudy_css_v2.css">
+</head>
+
+
+<body>
+	<nav>
+		<div class="menu-btn">
+			<div class="line line--1"></div>
+			<img src="campass.jpg">
+			<div class="line line--3"></div>
+		</div>
+
+		<div class="nav-links">
+			<a class="link" href="#css" style="font-size: 50px;"><em>CSS</em></a>
+			<a class="link" href="#display">Display</a>
+			<a class="link" href="#background">BackGround</a>
+			<a class="link" href="#font">글자 관련 속성</a>
+			<a class="link" href="#position">위치 속성</a>
+			<a class="link" href="#overflow">Overflow</a>
+			<a class="link" href="#float">Float</a>
+			<a class="link" href="#shadow">Shadow</a>
+			<a class="link" href="#media">Media</a>
+			<a class="link" href="#" style="font-size: 50px;"><em>메뉴바</em></a>
+		</div>
+	</nav>
+	<div class="navbar navbar-expand-sm bg-light">
+  		<div class="container-fluid">
+    		<ul class="navbar-nav">
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_html.html">HTML</a>
+      			</li>
+      			<li class="nav-item">
+       				 <a class="nav-link" href="mystudy_main_css.html"><strong>CSS</strong></a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_bootstrap.html">BOOTSTRAP</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_javascript.html">JAVASCRIPT</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_jQuery.html">JQUERY</a>
+      			</li>
+    		</ul>
+  		</div>
+	</div>
+	
+	<div class="wrap">
+		<div id="css" class="aside">
+			<h1>CSS</h1>
+		</div>
+		<!-- endofcss -->
+			<div class="content">
+				<div id="display" class="content2">
+					<a href="css/display_none.html">display_none</a><br>
+					<a href="css/display_block.html">display_block</a><br>
+					<a href="css/display_inline.html">display_inline</a><br>
+					<a href="css/display_inline-block.html">display_inline-block</a><br>
+					<p>설명: css diplay 속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>display :none,block,inline,inline-block</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>none으로 설정하면 안에 값이 보이지 않음.</p></li>
+						<li><p>block으로 설정하면 세로로 정렬된다.</p></li>
+						<li><p>inline으로 설정하면 가로로 정렬된다.</p></li>
+						<li><p>inline-block인 기본적으로 가로로 설정되며 안에 객체값 세부설정 가능하다.</p></li>
+					</ul>
+				</div>
+				<div id="background" class="content2">
+					<a href="css/background_image.html">background_image</a><br>
+					<a href="css/background_imageLayer.html">background_imageLayer</a><br>
+					<a href="css/background_size.html">background_size</a><br>
+					<a href="css/background_sizeEach.html">background_sizeEach</a><br>
+					<a href="css/background_repeatNone.html">background_repeatNone</a><br>
+					<a href="css/background_attachmentFixed.html">background_attachmentFixed</a><br>
+					<a href="css/background_attachmentScroll.html">background_attachmentScroll</a><br>
+					<a href="css/background_positionBottom.html">background_positionBottom</a><br>
+					<a href="css/background_positionEach.html">background_positionEach</a><br>
+					<p>설명: css background 속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>background-image: url()</p></li>
+						<li><p>background-size: 너비 높이</p></li>
+						<li><p>background-repeat: repeat-x,repeat-y,no-repeat</p></li>
+						<li><p>background-attachment: fixed,scroll</p></li>
+						<li><p>background-position:
+								키워드/background-position:x축/background-position:x축 y축</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>기본적으로 body태그에 사용한다.</p></li>
+						<li><p>기본적으로는 background는 repeat된다.</p></li>
+						<li><p>각각에 그림을 layer라고 부른다.</p></li>
+						<li><p>size를 한개의 값으로 설정하면 너비로 인식하고, size를 두개의 값으로 설정하면
+								처음은 너비로, 두번째는 높이로 인식한다</p></li>
+						<li><p>size를 %로 설정하면 창에 크기에 맞게 사이즈가 맞춰진다.</p></li>
+						<li><p>repeat-x는 x축으로 반복,repeat-y는 y축으로 반복한다.</p></li>
+						<li><p>no-repeat속성을 사용하면 반복하지 않음.</p></li>
+						<li><p>background-attachment속성에 fixed를 사용하면 배경이 스크롤 내려도
+								고정되고, scroll로 하면 그 위치에 고정되어 스크롤 되어도 따라오지 않음.</p></li>
+						<li><p>background-position의 키워드 값으로 center,top,bottom이
+								있다.</p></li>
+					</ul>
+				</div>
+				<div id="font" class="content2">
+					<a href="css/font_size.html">font_size</a><br>
+					<a href="css/font_family.html">font_family</a><br>
+					<a href="css/font_styleWeight.html">font_styleWeight</a><br>
+					<a href="css/font_textAlign.html">font_textAlign</a><br>
+					<a href="css/font_textDecoration.html">font_textDecoration</a><br>
+					<p>설명: css 글자에 관한 속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>font-size:</p></li>
+						<li><p>font-family:</p></li>
+						<li><p>font-style:</p></li>
+						<li><p>font-weight:</p></li>
+						<li><p>text-align:</p></li>
+						<li><p>text-decoration:</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>운영체제가 제공하는 글꼴만 사용가능하며 font 글꼴은 드라이브/Windows/font에서
+								확인 가능하다.</p></li>
+						<li><p>font-size로 설정가능한 값들은 px,em 같은 단위나 large,small 같은
+								키워드도 가능</p></li>
+						<li><p>font-family는 글꼴 설정하는 속성이다.</p></li>
+						<li><p>font-style은 글자 스타일 설정,font-weight는 글자 두께 설정 속성이다.</p></li>
+						<li><p>두께를 지원하지 않는 글꼴은 두께설정 불가능.</p></li>
+						<li><p>text-align은 글자의 정렬을 지정해 준다. 키워드로는
+								center,right,left,</p></li>
+						<li><p>text-decoration속성에 none을 쓰면 &lt;a&gt;태그를 밑줄 없이
+								출력가능하다.</p></li>
+					</ul>
+				</div>
+				<div id="position" class="content2">
+					<a href="css/position_absolute.html">position_absolute</a><br>
+					<a href="css/position_absoluteLeftTop.html">position_absoluteLeftTop</a><br>
+					<a href="css/position_zIndex.html">position_zIndex</a><br>
+					<p>설명: css 객체위치 속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>position:</p></li>
+						<li><p>z-index:</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>position속성을 쓰면 객체의 위치를 조정한다. absolute를 사용하면 절대
+								좌표값으로 위치하고,시작위치는 왼쪽 맨위다.</p></li>
+						<li><p>position_absolute를 보면 박스의 좌표가 다 같아서 겹치는데, 가장 마지막에
+								선언된 파랑박스만 나온다.</p></li>
+						<li><p>z-index속성은 객채가 겹칠떼 z-index값이 큰값이 위로간다.1부터 시작한다.</p></li>
+					</ul>
+				</div>
+				<div id="overflow" class="content2">
+					<a href="css/position_formulaOverflowHidden.html">position_formulaOverflowHidden</a><br>
+					<a href="css/position_formulaOverflowScroll.html">position_formulaOverflowScroll</a><br>
+					<p>설명: css overflow속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>overflow: hidden,scroll,visible</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>overflow속성중에 hidden은 생성한 객체 안에 있는 요소들이 객체보다 클 경우
+								보이지 않게 한다.</p></li>
+						<li><p>overflow속성중에 scroll은 생성한 객체 안에 있는 요소들이 객체보다 클 경우
+								스크롤을 움직여 볼 수 있다.</p></li>
+					</ul>
+				</div>
+				<div id="float" class="content2">
+					<a href="css/float_basic.html">float_basic</a><br>
+					<a href="css/float_image.html">float_image</a><br>
+					<a href="css/float_boxLeft.html">float_boxLeft</a><br>
+					<a href="css/float_boxRight.html">float_boxRight</a><br>
+					<p>설명: css float속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>float: left,right</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>float속성은 한줄에 객체를 나열해야할때 사용한다.</p></li>
+						<li><p>float속성은 가장 먼저 불려진 객채부터 선택한 속성값에서 순서대로 나열한다.</p></li>
+						<li><p>float속성 배치가 끝났으면 다음 div는 css상에서 clear: both;을 통해서
+								해제 해야한다.</p></li>
+					</ul>
+				</div>
+				<div id="shadow" class="content2">
+					<a href="css/shadow_textShadow.html">shadow_textShadow</a><br>
+					<a href="css/shadow_boxShadow.html">shadow_boxShadow</a><br>
+					<p>설명: css 그림자 속성</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>text-shadow:</p></li>
+						<li><p>box-shadow:</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>text-shadow는 매개변수가 각각 순서대로 (text-shadow: 오른쪽 아래
+								흐림도 색상)을 의미한다.</p></li>
+						<li><p>box-shadow는 매개변수가 각각 순서대로 (box-shadow: 오른쪽 아래 흐림도
+								색상)을 의미한다.</p></li>
+					</ul>
+				</div>
+				<div id="media" class="content2">
+					<a href="css/with_meta.html">with_meta</a><br>
+					<a href="css/at_media_rule.html">at_media_rule</a><br>
+					<a href="css/media_attribute.html">media_attribute</a><br>
+					<a href="css/media_feature.html">media_feature</a><br>
+					<a href="css/orientation.html">orientation</a><br>
+					<a href="css/pattern1.html">pattern1</a><br>
+					<a href="css/pattern2.html">pattern2</a><br>
+					<a href="css/pattern3.html">pattern3</a><br>
+					<a href="css/pattern4.html">pattern4</a><br>
+					<p>설명: 미디어 쿼리</p>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>@media</p></li>
+						<li><p>@media sceen,print</p></li>
+						<li><p>@media (max-width: )(min-width: )</p></li>
+						<li><p>@media screen and (orientation:
+								portrait,landscape)</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>메타 태그에 뷰포트 설정을 통해서 단말기에 따라서 화면 스크린 출력 방식을 다르게 할 수
+								있다.(at_media_rule)</p></li>
+						<li><p>@media를 사용하여 단말기 종류에 따라서 출력 방식을 다르게 할 수 있다.</p></li>
+						<li><p>위에 at_media_rule에서는 스크린상에 보여줄때와 프린트 할 때 각각 배경생을
+								다르게 하여 보여준다.</p></li>
+						<li><p>외부 css파일로도 미디어속성에 종류에 따라서 다르게 출력할 수
+								있다.(media_attribute)</p></li>
+						<li><p>픽셀값을 통해서 단말기의 종류를 파악해서 화면 출력값을 다르게 할 수
+								있다.(media_feature)</p></li>
+						<li><p>오리엔테이션을 통해서 단말장치에 맞게 출력을 가로,세로 각각 따로 설정할 수
+								있다.portrait은 세로,landscape은 가로로 출력한다. (orientation)</p></li>
+						<li><p>픽셀 크기에 따른 단말기에 맞게 메뉴와 컨탠츠의 배치를 설정한다.스마프폰 일때는
+								float값을 해제해서 아래로 정렬된다.(pattern1)</p></li>
+						<li><p>pattern2는 pattern1과는 다르게 오른쪽에 메뉴가 있다.</p></li>
+						<li><p>pattern3,4는 pattern1,2와는 다르게 body배열순서를 컨탠츠를 먼저하고
+								메뉴를 나중에 해서 스마트폰 일때는 float값을 해제되어 있어서 컨탠츠가 먼저 출력된다.</p></li>
+					</ul>
+				</div>
+			</div>
+			<!-- endofcontent -->
+		</div>
+		<!-- endofwrap -->
+	
+	<script src="mystudy_js_v2.js"> </script>
+
+
+</body>
+</html>

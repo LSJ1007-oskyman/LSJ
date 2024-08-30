@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1" />
+<title>mystudy</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystudy_css_v2.css">
+<style>
+.wrap {
+	width: 850px;
+	margin: 0 auto;
+	margin-top: 15px;
+	bottom: 15px;
+	overflow: hidden;
+	border: 1px solid;
+	border-radius: 10px;
+	background:  rgba(255, 255, 255, 0.7);
+}
+
+.aside {
+	width: 800px;
+	font-size: 100;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	
+}
+
+.content {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.content2 {
+	width: 700px;
+	border: 1px solid;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 20px;
+	border-radius: 10px;
+	background: #91D8FA;
+}
+
+html, body {
+	height: 100vh;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: radial-gradient(circle 800px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+
+nav {
+	overflow: hidden;
+	position: fixed;
+	transform: translateX(-300px);
+	height: 100%;
+	width: 400px;
+	transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+	border-radius: 0% 50% 50% 0%;
+}
+
+nav.nav-open {
+	transform: translateX(0px);
+	border-radius: 0% 0% 0% 0%;
+	background: rgba(255, 255, 255, 0.6);
+}
+
+nav .menu-btn {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	padding: 0;
+	width: 30px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+h1{
+	font-size: 50px;
+}
+nav .menu-btn .line {
+	padding: 0;
+	width: 30px;
+	background: #fff;
+	height: 2px;
+	margin: 5px 0;
+	transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .menu-btn .line.line--1 {
+	width: 30px;
+	transform: rotate(0) translateY(0px);
+	opacity: 0;
+}
+
+nav .menu-btn .line.line--1.line-cross {
+	width: 30px;
+	transform: rotate(45deg) translateY(36.45px);
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+nav .menu-btn img {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	transform: translateX(0);
+	transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .menu-btn img.fade-out {
+	width: 30px;
+	transform: translate(30px);
+	opacity: 0;
+}
+
+nav .menu-btn .line.line--3 {
+	width: 30px;
+	opacity: 0;
+	transform: rotate(0) translateY(0px);
+}
+
+nav .menu-btn .line.line--3.line-cross {
+	width: 30px;
+	transform: rotate(-45deg) translateY(-36.45px);
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+nav .nav-links {
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transform: translateX(-100px);
+	opacity: 0;
+	transition: all 900ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links.fade-in {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+nav .nav-links .link {
+	margin: 20px 0;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: rgba(0, 0, 0, 0.9);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	transition: all 300ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links .link:hover {
+	color: rgba(0, 0, 0, .5);
+}
+
+nav-item>a {
+	margin: 0 20px;
+	color: #fff;
+	font-size: 2rem;
+	transition: all 400ms ease;
+}
+
+.content2>a {
+	color: black;
+	font-size: 2rem;
+}
+
+
+a:hover {
+	color: #222;
+}
+</style>
+
+
+
+</head>
+
+
+<body>
+	<nav>
+		<div class="menu-btn">
+			<div class="line line--1"></div>
+			<img src="campass.jpg">
+			<div class="line line--3"></div>
+		</div>
+
+		<div class="nav-links">
+			<a class="link" href="#html" style="font-size: 50px;"><em>HTML</em></a>
+			<a class="link" href="#anchor">anchor</a>
+			<a class="link" href="#image">image</a>
+			<a class="link" href="#outer">외부스크립창 띄우기</a>
+			<a class="link" href="#list">List</a>
+			<a class="link" href="#table">Table</a>
+			<a class="link" href="#basicform">회원관리폼 만들기에 필요한 요소들</a>
+			<a class="link" href="#" style="font-size: 50px;"><em>메뉴바</em></a>
+		</div>
+	</nav>
+	<div class="navbar navbar-expand-sm bg-light">
+  		<div class="container-fluid">
+    		<ul class="navbar-nav">
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_html.html"><strong>HTML</strong></a>
+      			</li>
+      			<li class="nav-item">
+       				 <a class="nav-link" href="mystudy_main_css.html">CSS</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_bootstrap.html">BOOTSTRAP</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_javascript.html">JAVASCRIPT</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_jQuery.html">JQUERY</a>
+      			</li>
+    		</ul>
+  		</div>
+	</div>
+	<div class="wrap">
+			<div id="html" class="aside">
+				<h1>HTML</h1>
+			</div>
+			<!-- endofHTML -->
+			<div class="content">
+				<div id="anchor" class="content2">
+					<a href="html/anchor.html">anchor</a><br><br>
+					<p>설명: 하이퍼링크하는 과정, 이미지에 하이퍼링크거는방법</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;a&gt;</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>&lt;a&gt;태그 안에 &lt;img&gt;태그를 쓰면 이미지가 하이퍼링크가 된다</p></li>
+					</ul>
+				</div>
+				<div id="image" class="content2">
+					<a href="html/image.html">image</a><br><br>
+					<p>설명: 이미지넣기</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;img&gt;</p></li>
+					</ul>
+				</div>
+				<div id="outer" class="content2">
+					<a href="html/HTMLPageWithOuterScript.html">HTMLPageWithOuterScript</a><br>
+					<p>설명: 외부 스크립트창 띄우기</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;script&gt;</p></li>
+					</ul>
+				</div>
+				<div id="list" class="content2">
+					<a href="html/list.html">list</a><br><br>
+					<p>설명: 리스트사용법</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;ul&gt;</p></li>
+						<li><p>&lt;ol&gt;</p></li>
+						<li><p>&lt;li&gt;</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>ul은 앞에 순서를 붙이지 않은 리스트</p></li>
+						<li><p>ol은 앞에 순서가 붙는 리스트</p></li>
+						<li><p>li는 리스트 객체들</p></li>
+						<li><p>type속성을 통해서 여러 타입으로 설정가능하다.</p></li>
+					</ul>
+				</div>
+				<div id="table" class="content2">
+					<a href="html/table.html">table</a><br>
+					<a href="html/register.html">register</a><br><br>
+					<p>설명: 테이블사용법</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;table&gt;</p></li>
+						<li><p>&lt;tr&gt;</p></li>
+						<li><p>&lt;th&gt;</p></li>
+						<li><p>&lt;td&gt;</p></li>
+					</ul>
+					<p>사용하는 속성</p>
+					<ul>
+						<li><p>bgcolor</p></li>
+						<li><p>colspan</p></li>
+						<li><p>rowspan</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>테이블 속성들</p></li>
+						<ul type="circle">
+							<li><p>table : 테이블 생성</p></li>
+							<li><p>tr : 행(row)을 정의</p></li>
+							<li><p>td : 열 을 정의</p></li>
+							<li><p>border : 표의 테두리를 출력(값이 클수록 테두리의 두께가 두꺼워진다.)</p></li>
+							<li><p>width : 표의 가로길이(너비)</p></li>
+							<li><p>height : 표의 세로 길이(높이)</p></li>
+							<li><p>align : 표의 위치 - left, center, right</p></li>
+							<li><p>bgcolor : 표의 배경색 설정</p></li>
+							<li><p>cellspacing : 셀과 설 사이의 간격을 설정 ( 경계선의 두께)</p></li>
+							<li><p>cellpadding : 셀의 테두리와 셀 안의 내용간의 간격을 설정</p></li>
+						</ul>
+						
+						<li><p>colspan속성은 열 합치기기능으로 td, th 태그 안에서만 사용할 수 있다.</p></li>
+						<li><p>colspan 속성값은 몇개의 열을 합치는가에 따라서 숫자를 지정한다. 예) &lt;td
+								colspan = 3&gt; : 3개의 열을 합치라는 의미</p></li>
+						<li><p>rowspan 속성은 행(row) 합치기 기능으로 td, th 태그 안에서만 사용할 수
+								있다.</p></li>
+						<li><p>rowspan 속성값은 몇개의 행을 합치는가에 따라서 숫자를 지정한다. 예)&lt;td
+								rowspan=3&gt;: 3개의 행을 합치라는 의미</p></li>
+					</ul>
+				</div>
+				<div id="basicform" class="content2">
+					<a href="html/loginform.html">loginform</a><br>
+					<a href="html/memberform.html">memberform</a><br><br>
+					<p>설명: 회원관리폼 만들기에 필요한 요소들</p>
+					<p>사용하는 태그</p>
+					<ul>
+						<li><p>&lt;form&gt;</p></li>
+						<li><p>&lt;input&gt;</p></li>
+						<li><p>&lt;caption&gt;</p></li>
+						<li><p>&lt;select&gt;</p></li>
+						<li><p>&lt;textarea &gt;</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>form태그의 속성들</p>
+							<ul type="circle">
+								<li><p>method : 값을 전달하는 방식을 설정하는 속성(get or post)</p></li>
+								<li><p>action : 값이 전달될 파일명을 설정</p></li>
+							</ul></li>
+						<li><p>input태그의 속성들</p>
+							<ul type="circle">
+								<li><p>size : 입력창의 크기 설정</p></li>
+								<li><p>maxlength : 최대 입력 가능한 글자수 설정</p></li>
+								<li><p>autofocus : 자동 포커스 기능</p></li>
+								<li><p>id : 각 양식의 태그를 구분하기 위한 역할</p></li>
+								<li><p>name : 값을 전단하기 위한 변수 역할 --넘거가는 곳(웹프로그램)에 id라는
+										변수에 값을 넘김</p></li>
+								<li><p>required : 입력 양식에 대한 필수 입력 검사</p></li>
+							</ul></li>
+						<li><p>select 태그는 콤보 박스를 생성해주는 태그로서 option태그로 여러 요소를 나열해서
+								원하는것을 채크하는 방식이다.</p></li>
+						<li><p>select속성</p>
+							<ul type="circle">
+								<li><p>autofocus: 페이지가 로드 되었을 때 해당 목록으로 바로 포커스가 맞춰진다.</p></li>
+								<li><p>disabled: 화면에는 보이지만 사용할 수 없게 만든다.</p></li>
+								<li><p>multiple: 여러 값을 선택할 수 있도록 한다.</p></li>
+								<li><p>name: 이름을 붙인다.</p></li>
+								<li><p>size: 목록을 펼치기 전에 보여질 목록의 개수를 정해준다.</p></li>
+								<li><p>selected: 이 속성이 추가된 요소를 미리 채크된 상태로 시작한다.</p></li>
+								<li><p>value: 서블릿으로 넘어갈 진짜 값을 입력하는 속성이다.</p></li>
+							</ul></li>
+						<li><p>caption 태그는 테이블의 캡션(caption, 테이블이나 사진, 삽화 등에 붙는
+								설명)을 정의할 때 사용합니다.</p></li>
+						<li><p>table 요소는 단 하나의 caption 요소만을 명시할 수 있으며, caption
+								태그는 언제나 table태그 바로 다음에 위치해야 합니다.</p></li>
+						<li><p>caption 요소의 콘텐츠는 테이블 바로 위쪽에 가운데 정렬되어 표시되지만, CSS의
+								text-align이나 caption-side 속성을 사용하여 캡션의 위치나 정렬 방법 등을 변경할 수 있습니다.</p></li>
+					</ul>
+				</div>
+			</div>
+			<!-- endofcontent -->
+		</div>
+		<!-- endofwrap -->
+	
+	<script src="mystudy_js_v2.js"> </script>
+
+
+</body>
+</html>

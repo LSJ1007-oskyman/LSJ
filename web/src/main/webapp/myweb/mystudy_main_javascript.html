@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1" />
+<title>mystudy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystudy_css_v2.css">
+</head>
+
+
+<body>
+	<nav>
+		<div class="menu-btn">
+			<div class="line line--1"></div>
+			<img src="campass.jpg">
+			<div class="line line--3"></div>
+		</div>
+
+		<div class="nav-links">
+			<a class="link" href="#javascript" style="font-size: 50px;"><em>JAVASCRIPT</em></a>
+			<a class="link" href="#jsbasic">기초</a>
+			<a class="link" href="#jsembeddedfunction">내장함수</a>
+			<a class="link" href="#jsoperation">연산자</a>
+			<a class="link" href="#jscondition">조건문</a>
+			<a class="link" href="#jsfunction">사용자정의함수</a>
+			<a class="link" href="#js_array">배열</a>
+			<a class="link" href="#js_embedded_object">내장객체</a>
+			<a class="link" href="#js_event">이벤트</a>
+			<a class="link" href="#" style="font-size: 50px;"><em>메뉴바</em></a>
+		</div>
+	</nav>
+	<div class="navbar navbar-expand-sm bg-light">
+  		<div class="container-fluid">
+    		<ul class="navbar-nav">
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_html.html">HTML</a>
+      			</li>
+      			<li class="nav-item">
+       				 <a class="nav-link" href="mystudy_main_css.html">CSS</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_bootstrap.html">BOOTSTRAP</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_javascript.html"><strong>JAVASCRIPT</strong></a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_jQuery.html">JQUERY</a>
+      			</li>
+    		</ul>
+  		</div>
+	</div>
+	<div class="wrap">
+			<div id="javascript" class="aside">
+				<h1>JAVASCRIPT</h1>
+			</div>
+			<!-- end of aside -->
+			<div class="content">
+				<div id="jsbasic" class="content2">
+					<a href="javascript/first.html">first</a><br> <a
+						href="javascript/call.html">call</a><br> <a
+						href="javascript/var.html">var</a><br> <a
+						href="javascript/let.html">let</a><br> <a
+						href="javascript/const.html">const</a><br> <a
+						href="javascript/variable.html">variable</a><br>
+					<p>설명: javascript기초</p>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>window객체는 브라우저 관련 최상위 내장객체로서 보통은 생략을 한다.</p></li>
+						<li><p>문자를 출력할때 쌍따옴표와 외따옴표를 모두 사용할 수 있다.</p></li>
+						<li><p>문장의 끝에는 세미콜론을 생략할 수 있다.</p></li>
+						<li><p>출력문 안에 태그값을 넣을 수 있다.</p></li>
+						<li><p>writeln은 줄바꿈을 해주지 못한다.</p></li>
+						<li><p>자바스크립트의 주석은 java와 동일하다.</p></li>
+						<li><p>이클립스 source에 toggle comment로 주석처리가
+								된다.(ctrl+shift+c)</p></li>
+						<li><p>여러가지 출력 방법이 존재한다.(first)</p></li>
+						<li><p>외부 js파일을 불러올 수 있다.(call)</p></li>
+						<li><p>선언자 없이 변수 선언하면 전역변수가 된다.</p></li>
+						<li><p>변수명은 대소문자를 구분한다.</p></li>
+						<li><p>변수명은 영문자,숫자,$,_로 만들 수 있다.</p></li>
+						<li><p>변수명의 첫 글자는 숫자로 시작할 수 없다.</p></li>
+						<li><p>예약어로 설정된 단어들은 변수명으로 사용할 수 없다.</p></li>
+						<li><p>var선언자는 변수선언, 변수선언 후 동시에 값할당, 한번에 여러개의 값 할당, 재할당이
+								가능하다.(var)</p></li>
+						<li><p>let선언자는 변수선언, 변수선언 후 동시에 값할당, 한번에 여러개의 값 할당은 가능하나
+								재할당은 불가능하다.(let)</p></li>
+						<li><p>const선언자는 변수선언, 변수선언 후 동시에 값할당, 한번에 여러개의 값 할당은
+								가능하나 변수 선언과 동시에 반드시 초기값, 즉 초기화를 해야하며 재할당은 불가능하다.(const)</p></li>
+						<li><p>const선언자는 주로 상수를 만들때 사용하는 선언자이다.</p></li>
+						<li><p>변수 출력할시 변수를 넘겨줄때 ,또는 + 둘다 사용가능하다.(variable)</p></li>
+						<li><p>javascript에 자료형이 없는 것은 아니다.단지 변수선언때 사용하지 않을
+								뿐이다.(variable)</p></li>
+					</ul>
+				</div>
+				<div id="jsembeddedfunction" class="content2">
+					<a href="javascript/alert.html">alert</a><br> <a
+						href="javascript/confirm.html">confirm</a><br> <a
+						href="javascript/prompt.html">prompt</a><br>
+					<p>설명: 내장함수</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>alert()</p></li>
+						<li><p>confirm()</p></li>
+						<li><p>prompt(메시지,초기값)</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>alert는 함수는 경고창이여서 확인 버튼만 있다.(alert)</p></li>
+						<li><p>confirm는 함수는 사용자로 부터 중요한 결정을 물어볼때 주로 사용하는 함수로
+								확인,취소버튼이 있다.(confirm)</p></li>
+						<li><p>confirm에서 확인버튼을 클릭하면 true값을 리턴하고, 취소 버튼을 클릭하면
+								false 값을 리턴한다.(confirm)</p></li>
+						<li><p>prompt는 사용자로 부터 입력을 받을때 사용하는 함수이다.(prompt)</p></li>
+						<li><p>prompt형식은 prompt('메세지','초기값').(prompt)</p></li>
+						<li><p>prompt으로 입력을 받을때 숫자를 입력받아도 string값으로 받아지지만 크기대소비교가
+								가능하다.(prompt)</p></li>
+					</ul>
+				</div>
+				<div id="jsoperation" class="content2">
+					<a href="javascript/oper01.html">oper01</a><br> <a
+						href="javascript/oper02.html">oper02</a><br> <a
+						href="javascript/oper03.html">oper03</a><br> <a
+						href="javascript/oper04.html">oper04</a><br> <a
+						href="javascript/oper05.html">oper05</a><br> <a
+						href="javascript/oper06.html">oper06</a><br> <a
+						href="javascript/oper07.html">oper07</a><br> <a
+						href="javascript/oper08.html">oper08</a><br>
+					<p>설명: 연산자</p>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>+값들을 연결하여 출력하면 순서대로 출력된다.(oper02)</p></li>
+						<li><p>숫자를 문자형으로 받아도 숫자형으로 받은 변수랑 비교 연산이 가능하다.(oper06)</p></li>
+						<li><p>문자형 변수끼리 비교연산이 가능하다.(oper07)</p></li>
+						<li><p>문자형으로된 숫자들은 비교연산은 가능하나 +를 하면 연산하는게 아니라 서로 붙여서
+								출력된다. 따라서 형변환을 통해서 연산해야한다.(oper08)</p></li>
+					</ul>
+				</div>
+				<div id="jscondition" class="content2">
+					<a href="javascript/if01.html">if01</a><br> <a
+						href="javascript/if02.html">if02</a><br> <a
+						href="javascript/if03.html">if03</a><br> <a
+						href="javascript/switch01.html">switch01</a><br> <a
+						href="javascript/switch02.html">switch02</a><br>
+					<p>설명: 조건문</p>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>+값들을 연결하여 출력하면 순서대로 출력된다.(oper02)</p></li>
+						<li><p>javascript에서 parseInt는 문자를 정수형으로 변환해주는
+								함수이다.(switch01)</p></li>
+					</ul>
+				</div>
+				<div id="jsloop" class="content2">
+					<a href="javascript/for01.html">for01</a><br> <a
+						href="javascript/for02.html">for02</a><br> <a
+						href="javascript/for03.html">for03</a><br> <a
+						href="javascript/for04.html">for04</a><br> <a
+						href="javascript/for05.html">for05</a><br> <a
+						href="javascript/for06.html">for06</a><br> <a
+						href="javascript/while01.html">while01</a><br> <a
+						href="javascript/while02.html">while02</a><br> <a
+						href="javascript/dowhile01.html">dowhile01</a><br> <a
+						href="javascript/dowhile02.html">dowhile02</a><br>
+					<p>설명: 반복문</p>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>eval은 문자열로된 수식을 연산해주는 함수이다.(dowhile02)</p></li>
+					</ul>
+				</div>
+				<div id="jsfunction" class="content2">
+					<a href="javascript/function01.html">function01</a><br> <a
+						href="javascript/function02.html">function02</a><br> <a
+						href="javascript/function03.html">function03</a><br> <a
+						href="javascript/function04.html">function04</a><br> <a
+						href="javascript/function05.html">function05</a><br> <a
+						href="javascript/builtin.html">builtin</a><br>
+					<p>설명: 사용자정의함수</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>parseInt</p></li>
+						<li><p>Number</p></li>
+						<li><p>String</p></li>
+						<li><p>eval</p></li>
+						<li><p>isNaN</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>자바스크립트에서 함수를 만들때는 function을 사용해서 만든다.</p></li>
+						<li><p>자바스크립트의 함수명은 대.소문자를 구분한다.</p></li>
+						<li><p>자바스크립트는 인터프리트방식의 언어로서 함수 호출과 함수정의가 서로 다른 스크립트에서
+								코딩될때 함수호출이 함수정의보다 먼저나오면 함수가 실행되지 않는다.(function01)</p></li>
+						<li><p>함수 호출과 함수정의가 서로 같은 스크립트에서 코딩될때 함수호출이 함수정의보다 먼저나와도
+								실행된다.즉 함수정의의 위치 상관없이 호출가능하다.이를 호이스팅기능이라고 부른다.(function01)</p></li>
+						<li><p>parseInt는 문자형 데이터를 정수형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>parseFloatt는 문자형 데이터를 실수형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>Number는 문자형 데이터를 숫자형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>String는 숫자형 데이터를 문자형 데이터로 변환해준다.(builtin)</p></li>
+						<li><p>eval는 문자형 산술식을 연산 수행해준다.(builtin)</p></li>
+						<li><p>isNaN는 숫자가 아니면(문자가 포함되면) true값을 리턴하는
+								함수이다.(builtin)</p></li>
+					</ul>
+				</div>
+				<div id="js_array" class="content2">
+					<a href="javascript/array01.html">array01</a><br> <a
+						href="javascript/array02.html">array02</a><br> <a
+						href="javascript/array03.html">array03</a><br>
+					<p>설명: 배열</p>
+					<p>사용하는 메서드</p>
+					<ul>
+						<li><p>length</p></li>
+						<li><p>join</p></li>
+						<li><p>reverse</p></li>
+						<li><p>sort</p></li>
+						<li><p>slice(start index,end index)</p></li>
+						<li><p>concat</p></li>
+						<li><p>pop</p></li>
+						<li><p>push</p></li>
+						<li><p>shift</p></li>
+						<li><p>unshift</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>length 메서드를 통해서 배열의 크기를 알 수 있다.(array01)</p></li>
+						<li><p>자료형을 써서 선언하는게 아니여서 초기화가 이루어지진 않는다.(array01)</p></li>
+						<li><p>join함수 사용시 결과값은 String형태이다.(array02)</p></li>
+						<li><p>reverse함수 사용시 원본 배열 자체도 순서가 바뀐다.(array02)</p></li>
+						<li><p>sort함수 사용시 원본 배열 자체도 순서가 바뀐다.(array02)</p></li>
+						<li><p>slice함수 start index부터 end index-1까지 출력한다.(array03)</p></li>
+						<li><p>pop함수 배열의 마지막 원소를 삭제 시켜준다.(array03)</p></li>
+						<li><p>push함수 배열의 마지막 인덱스에 새로운 데이터를 삽입 해주는 함수이다.(array03)</p></li>
+						<li><p>shift함수는 배열의 첫번째 원소를 삭제 해주는 함수이다.(array03)</p></li>
+						<li><p>unshift함수는 배열의 첫번째 인덱스에 새로운 데이터를 삽입 해주는 함수이다.(array03)</p></li>
+					</ul>
+				</div>
+				<div id="js_embedded_object" class="content2">
+					<a href="javascript/date01.html">date01</a><br> 
+					<a href="javascript/date02.html">date02</a><br>
+					<a href="javascript/date03.html">date03</a><br>
+					<a href="javascript/math01.html">math01</a><br>
+					<a href="javascript/math02.html">math02</a><br>
+					<a href="javascript/string01.html">string01</a><br>
+					<a href="javascript/string02.html">string02</a><br>
+					<a href="javascript/string03.html">string03</a><br>
+					<a href="javascript/string04.html">string04</a><br>
+					<p>설명: 내장객체</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>Date()</p></li>
+						<li><p>document.getElementById(id값)</p></li>
+						<li><p>setTimeout(시행할 명령,1/1000초)</p></li>
+						<li><p>clearTimeout()</p></li>
+						<li><p>location.reload()</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>Date메소드</p>
+							<ul>
+								<li><p>getFullYear():년도를 구해온다.</p></li>
+								<li><p>getMonth():월을 구해오는데 0~11이여서 +1해야 원하는 월을 구해온다.</p></li>
+								<li><p>getDate():일을 구해온다.</p></li>
+								<li><p>getHours():시간을 구해온다.</p></li>
+								<li><p>getMinutes():분을 구해온다.</p></li>
+								<li><p>getSeconds():초를 구해온다.</p></li>
+								<li><p>getDay():요일에 맞는 숫자를 구해오는데 일요일부터 0이고 토요일이 6이다.원하는
+										요일을 출력하고싶으면 요일 배열을 만들어서 숫자에 맞게 출력시켜야한다.</p></li>
+							</ul></li>
+						<li>document.getElementById를 이용해 원하는 태그의 id값을 통해서 태그를 불러와서
+							속성값을 바꿀수 있다.(Date02)</li>
+						<li>setTimeout(시행할 명령,1/1000초)은 1/1000초 마다 시행할 명령을 반복하는
+							함수이다.window객체가 제공한다.(Date02)</li>
+						<li>clearTimeout()함수는 setTimeout() 명령을 멈추게하는 함수이다.(Date02)</li>
+						<li>clearTimeout()함수로 원하는 setTimeout() 명령을 멈추게하려면
+							setTimeout()자체를 하나의 변수에 넣어서 clearTimeout()에 넣는다.(Date02)</li>
+						<li>setTimeout()자체를 하나의 변수에 넣을때 변수 앞에 선언자 없이 하여 전역변수로
+							선언했다.(Date02)</li>
+						<li>onLoad이벤트를 통해서 바로 함수를 실행할 수 있다.(Date02)</li>
+						<li><p>Math속성,메소드</p>
+							<ul>
+								<li><p>Math.E:오일러상수</p></li>
+								<li><p>Math.PI: 파이.</p></li>
+								<li><p>Math.abs(): 절대값.</p></li>
+								<li><p>Math.max(),Math.min(): 최대값, 최소값.</p></li>
+								<li><p>Math.ceil(): 올림.</p></li>
+								<li><p>Math.round(): 반올림.</p></li>
+								<li><p>Math.floor(): 내림.</p></li>
+								<li><p>Math.random(): 난수.</p></li>
+								<li><p>Math.pow(밑,지수): 거듭제곱.</p></li>
+								<li><p>Math.sqrt(): 제곱근.</p></li>
+							</ul></li>
+						<li><p>location.reload()는 페이지를 새로고침해준다.</p></li>
+						<li><p>String속성,메소드</p>
+							<ul>
+								<li><p>length:길이를 구해온다</p></li>
+								<li><p>charAt() : 인덱스 번호의 문자를 추출</p></li>
+								<li><p>indexOf(찾는 문자,시작 인덱스) : 시작 인덱스 이후로 가장 먼저 나오는 문자의 인덱스 값을 구해온다.</p></li>
+								<li><p>lastIndexOf(찾는 문자): 찾는 문자를 뒤에서 부터 찾아와 그 인덱스 값을 리턴한다.</p></li>
+								<li><p>toUpperCase():대문자로 변환 해주는 함수.</p></li>
+								<li><p>toLowerCase():소문자로 변환 해주는 함수.</p></li>
+								<li><p>substring(start index, end index): start index에서 부터 end index-1인덱스 까지의 문자열을 추출한다.</p></li>
+								<li><p>substr(start index,추출할 문자열의 길이):start index에서 부터 원하는 길이의 문자열을 추출한다.</p></li>
+							</ul></li>
+					</ul>
+				</div>
+				<div id="js_event" class="content2">
+					<a href="javascript/select_id.html">select_id</a><br>
+					<a href="javascript/select_query.html">select_query</a><br>
+					<a href="javascript/select_all.html">select_all</a><br>
+					<a href="javascript/click.html">click</a><br>
+					<a href="javascript/focus01.html">focus01</a><br>
+					<a href="javascript/focus02.html">focus02</a><br>
+					<p>설명: 이벤트</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>document.getElementbyId(아이디값)</p></li>
+						<li><p>document.querySelector(선택자)</p></li>
+						<li><p>document.getElementbyName(이름)</p></li>
+						<li><p>document.getElementbyClassName(클래스)</p></li>
+						<li><p>document.querySelector(선택자)</p></li>
+						<li><p>onclick</p></li>
+						<li><p>focus</p></li>
+						<li><p>blur</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>html에서 태그는 보통 element라고 불린다.</p></li>
+						<li><p>html은 반드시 1개의 root element로 시작해야한다.</p></li>
+						<li><p>document.getElementbyId(아이디값),document.querySelector(선택자)는 한개의 element만 구해온다</p></li>
+						<li><p>document.getElementbyName(이름),document.getElementbyClassName(클래스),document.querySelector(선택자)는 여러개의 element를 구해온다. 이때 배열로 가져온다.</p></li>
+						<li><p>스크립트 상에 함수 위에다가 전역변수로서 Id값으로 element를 선언하면 javascript의 인터프리터적인 성격 때문에 정상적으로 인식되지 않는다.(focus01)</p></li>
+					</ul>
+				</div>
+				<div id="js_etc" class="content2">
+					<a href="javascript/checkbox01.html">checkbox01</a><br>
+					<a href="javascript/checkbox02.html">checkbox02</a><br>
+					<a href="javascript/document01.html">document01</a><br>
+					<a href="javascript/history01.html">history01</a><br>
+					<a href="javascript/history02.html">history02</a><br>
+					<a href="javascript/history03.html">history03</a><br>
+					<a href="javascript/select_id.html">select_id</a><br>
+					<a href="javascript/select_id.html">select_id</a><br>
+					<a href="javascript/select_id.html">select_id</a><br>
+					
+					<p>설명: 여러 기능들</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>.checked</p></li>
+						<li><p>.bgColor</p></li>
+						<li><p>.fgColor</p></li>						
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>checkbox는 여러개 선택이 가능하다.</p></li>
+						<li><p>html은 반드시 1개의 root element로 시작해야한다.</p></li>
+						<li><p>document.getElementbyId(아이디값),document.querySelector(선택자)는 한개의 element만 구해온다</p></li>
+						<li><p>document.getElementbyName(이름),document.getElementbyClassName(클래스),document.querySelector(선택자)는 여러개의 element를 구해온다. 이때 배열로 가져온다.</p></li>
+						<li><p>스크립트 상에 함수 위에다가 전역변수로서 Id값으로 element를 선언하면 javascript의 인터프리터적인 성격 때문에 정상적으로 인식되지 않는다.(focus01)</p></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end of content -->
+		</div>
+		<!-- endofwrap -->
+	
+	<script src="mystudy_js_v2.js"> </script>
+
+
+</body>
+</html>

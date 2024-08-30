@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1" />
+<title>mystudy</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystudy_css_v2.css">
+</head>
+
+
+<body>
+	<nav>
+		<div class="menu-btn">
+			<div class="line line--1"></div>
+			<img src="campass.jpg">
+			<div class="line line--3"></div>
+		</div>
+
+		<div class="nav-links">
+			<a class="link" href="#jQuery" style="font-size: 50px;"><em>jQuery</em></a>
+			<a class="link" href="#calling">jQuery연결 및 간단한 출력</a>
+			<a class="link" href="#css">CSS적용</a>
+			<a class="link" href="#event">이벤트 처리</a>
+			<a class="link" href="#form_subject">form객체들</a>
+			<a class="link" href="#function">여러함수들</a>
+			<a class="link" href="#inputform">입력 양식 유효성 검사 실습</a>
+			<a class="link" href="#ajax">ajax</a>
+			<a class="link" href="#" style="font-size: 50px;"><em>메뉴바</em></a>
+		</div>
+	</nav>
+	<div class="navbar navbar-expand-sm bg-light">
+  		<div class="container-fluid">
+    		<ul class="navbar-nav">
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_html.html">HTML</a>
+      			</li>
+      			<li class="nav-item">
+       				 <a class="nav-link" href="mystudy_main_css.html">CSS</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_bootstrap.html">BOOTSTRAP</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_javascript.html">JAVASCRIPT</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="mystudy_main_jQuery.html"><strong>JQUERY</strong></a>
+      			</li>
+    		</ul>
+  		</div>
+	</div>
+	<div class="wrap">
+			<div id="jQuery" class="aside">
+				<h1>jQuery</h1>
+			</div>
+			<!-- endofHTML -->
+			<div class="content">
+				<div id="calling" class="content2">
+					<a href="jQuery/first.html">first</a><br><br>
+					<a href="jQuery/second.html">second</a><br><br>
+					<a href="jQuery/call.html">call</a><br><br>
+					<p>설명: jQuery연결 및 간단한 출력</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$</p></li>
+						<li><p>$(document).ready(function(){})</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>jQuery가 실질적으로 하는일은 태그값을 불러오는거 말고는 없다.</p></li>
+						<li><p>$는 jQuery를 불러온다는 의미이다.(first)</p></li>
+						<li><p>$(document).ready(function(){})는 현재 HTML파일이 준비 완료 되면이라는 뜻이다.(first)</p></li>
+						<li><p>$(function(){})로 간단하게$(document).ready(function(){})를 대체할 수 있다.(second)</p></li>
+						<li><p>script태그안에 src속성을 통해서 외부 스크립트를 불러올 수 있다.(call)</p></li>
+						<li><p>보통 jQuery는 CDN방식으로 불러온다.(call)</p></li>
+					</ul>
+				</div>
+				<div id="css" class="content2">
+					<a href="jQuery/css01.html">css01</a><br><br>
+					<a href="jQuery/css02.html">css02</a><br><br>
+					<a href="jQuery/css03.html">css03</a><br><br>
+					<a href="jQuery/css04.html">css04</a><br><br>
+					<a href="jQuery/css05.html">css05</a><br><br>
+					<a href="jQuery/css06.html">css06</a><br><br>
+					<p>설명: CSS적용</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').css('속성')</p></li>
+						<li><p>$('태그 또는 선택자').css('속성','변경할 값')</p></li>
+						<li><p>$('태그 또는 선택자','태그 또는 선택자').css('속성','변경할 값')</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').css('속성')은 해당 태그 또는 선택자의 속성 값을 가져온다.(css01)</p></li>
+						<li><p>$('태그 또는 선택자').css('속성','변경할 값')은 해당 태그 또는 선택자의 속성 값을 변경할 값으로 한다.(css01)</p></li>
+						<li><p>$('태그 또는 선택자').css('속성','변경할 값')안에 {}를 넣어서(.css({속성: 변경할 값,속성: 변경할 값...}))여러개를 한번에 변경가능하다.</p></li>
+						<li><p>$('태그 또는 선택자','태그 또는 선택자').css('속성','변경할 값')를 통해서 $안에 있는 태그 또는 선택자 모두가 변경된다.(css06)</p></li>
+					</ul>
+				</div>
+				<div id="event" class="content2">
+					<a href="jQuery/click01.html">click01</a><br><br>
+					<a href="jQuery/click02.html">click02</a><br><br>
+					<a href="jQuery/click03.html">click03</a><br><br>
+					<a href="jQuery/click04.html">click04</a><br><br>
+					<a href="jQuery/click05.html">click05</a><br><br>
+					<a href="jQuery/dblclick01.html">dblclick01</a><br><br>
+					<a href="jQuery/mouseover01.html">mouseover01</a><br><br>
+					<a href="jQuery/keyup01.html">keyup01</a><br><br>
+					<a href="jQuery/change01.html">change01</a><br><br>
+					<a href="jQuery/submit01.html">submit01</a><br><br>
+					<a href="jQuery/event_on.html">event_on</a><br><br>
+					<p>설명: jQuery이벤트 처리</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').click(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').dblclick(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').attr('속성')</p></li>
+						<li><p>$('태그 또는 선택자').attr('속성','변경할 값')</p></li>
+						<li><p>eq</p></li>
+						<li><p>this</p></li>
+						<li><p>$('태그 또는 선택자').mouseover(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').mouseout(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').val()</p></li>
+						<li><p>$('태그 또는 선택자').keyup(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').change(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').removeAttr('속성')</p></li>
+						<li><p>$('태그 또는 선택자').submit(function(){})</p></li>
+						<li><p>$('태그 또는 선택자').on('이벤트이름',function(){})</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').click(function(){})를 통해서 해당 태그 또는 선택자의 값의 클릭 이벤트 여부를 알 수 있다.(click01)</p></li>
+						<li><p>$('태그 또는 선택자').attr('속성')를 통해서 태그 또는 선택자 내의 속성값을 가져올 수 있다.(click01)</p></li>
+						<li><p>$('태그 또는 선택자').attr('속성','변경할 값')를 통해서 태그 또는 선택자 내의 속성값을 변경할 수 있다.(click01)</p></li>
+						<li><p>$('태그 또는 선택자').attr('속성','변경할 값')는 .attr('속성','변경할 값')를 이어붙여서 한번에 여러개를 변경할 수 있다.(click01)</p></li>
+						<li><p>&lt;a&gt;태그도 이벤트객체로 할 수 있다.(click02)</p></li>
+						<li><p>&lt;a&gt;태그에 하이퍼링크값이 존재할 경우 return false;를 $('태그 또는 선택자').click(function(){})안에 넣어서 동작을 막을 수 있다.(click03)</p></li>
+						<li><p>eq는 가져오는 태그 또는 선택자의 객체가 여러개인 경우 eq(번호)를 통해서 순서대로 객체를 불러올 수 있게 도와준다.(click04)</p></li>
+						<li><p>this는 이벤트를 발생시킨 객체를 의미하며 굳이 eq를 사용하여 하나하나 불러올 필요가 없다.(click05)</p></li>
+						<li><p>$('태그 또는 선택자').dblclick(function(){})를 통해서 해당 태그 또는 선택자의 값의 더블클릭 이벤트 여부를 확인 할 수 있다.(dblclick01)</p></li>
+						<li><p>$('태그 또는 선택자').mouseover(function(){})를 통해서 해당 태그 또는 선택자의 값의 마우스가 올라갔는지 알 수 있다.(mouseover01)</p></li>
+						<li><p>$('태그 또는 선택자').mouseout(function(){})를 통해서 해당 태그 또는 선택자의 값의 마우스가 내려갔는지 알 수 있다.(mouseover01)</p></li>
+						<li><p>$('태그 또는 선택자').mouseover(function(){}).mouseout(function(){})로 붙여서 한번에 정의할 수 있다.(mouseover01)</p></li>
+						<li><p>$('태그 또는 선택자').val()은 입력양식(input),선택양식(select)의 입력,선택값을 구해올때 사용된다.(keyup01)</p></li>
+						<li><p>$('태그 또는 선택자').keyup(function(){})는 해당 태그 또는 선택자의 값의 keyup이벤트를 관리한다.(keyup01)</p></li>
+						<li><p>값의 길이를 구하는 함수가 따로 없기 때문에 length속성을 사용한다.(keyup01)</p></li>
+						<li><p>$('태그 또는 선택자').change(function(){})는 선택양식의 값의 변화가 있는지를 알 수 있게 해준다.(change01)</p></li>
+						<li><p>$('태그 또는 선택자').removeAttr('속성')은 해당 속성의 적용을 해제시킨다.(change01)</p></li>
+						<li><p>$('태그 또는 선택자').removeAttr('readonly')를 하는 이유는 정해진 도메인을 선택했을 때 readonly가 되어서 다시 직접입력으로 돌아와도 남아있기 때문이다.(change01)</p></li>
+						<li><p>$('태그 또는 선택자').submit(function(){})는 태그 또는 선택자의 submit이벤트를 관리한다.(submit01)</p></li>				
+						<li><p>유효성 검사를 위해서 값이 넘어가기 전에 처리하기 위해서는 $('태그 또는 선택자').submit(function(){})의 태그 또는 선택자를 submit버튼이 아닌 반드시 form으로 해야 값이 넘어가지 않는다.</p></li>				
+						<li><p>$('태그 또는 선택자').on('이벤트이름',function(){})는 원하는 이밴트를 on을 통해서 보다 간편하게 처리할수 있게 해준다.</p></li>				
+					</ul>
+				</div>
+				<div id="form_subject" class="content2">
+					<a href="jQuery/form01.html">form01</a><br><br>
+					<a href="jQuery/text01.html">text01</a><br><br>
+					<a href="jQuery/text01.html">text01</a><br><br>
+					<a href="jQuery/checkbox01.html">checkbox01</a><br><br>
+					<a href="jQuery/radio01.html">radio01</a><br><br>
+					<a href="jQuery/radio02.html">radio02</a><br><br>
+					<a href="jQuery/select01.html">select01</a><br><br>
+					<a href="jQuery.regular01.html">regular01</a><br><br>
+					<p>설명: form객체들</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').val()</p></li>
+						<li><p>$('태그 또는 선택자').text()</p></li>
+						<li><p>$('태그 또는 선택자').prop('속성')</p></li>
+						<li><p>$('태그 또는 선택자').prop('속성','변경값')</p></li>
+						<li><p>$('태그 또는 선택자').removeProp('속성','변경값')</p></li>
+						<li><p>$('태그 또는 선택자').is('가상선택자')</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').val()은 입력양식(input),선택양식(select)의 입력,선택값을 구해올때 사용된다.(form01)</p></li>
+						<li><p>입력양식(input),선택양식(select)의 값을 설정할 때도 $('태그 또는 선택자').val('입력값')을 사용한다.(form01)</p></li>
+						<li><p>$('태그 또는 선택자').text()는 태그 또는 선택자의 입력된 값을 가져온다.(text01)</p></li>
+						<li><p>:checkbox는 가상 선택자로서 모든 checkbox로 태그된 모든 요소를 가져온다.(checkbox01)</p></li>
+						<li><p>prop()는 속성(property)에 속성값을 설정하거나, 속성으로 속성값을 구해오는 역할을 하는 메소드이다.(checkbox01)</p></li>
+						<li><p>radio버튼은 반드시 name값을 같이 설정해서 묶어야 다중선택을 방지할 수 있다.(radio01)</p></li>
+						<li><p> is()는 radio버튼이나 checkbox의 선택 여부를 판별할때 사용되는 메소드 선택되면 true, 선택되지 않으면 false를 리턴한다.(radio01)</p></li>
+						<li><p>:radio는 가상 선택자로서 모든 radio로 태그된 모든 요소를 가져온다.(radio02)</p></li>
+						<li><p>select는 change로 이벤트 캐치를 한다.(select01)</p></li>
+						<li><p>정규 표현식(Regular Expression) 정규 표현식 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다.(regular01)</p></li>
+						<li><p>^:정규식 시작,+:1회이상, []:형식 지정,$:정규식 종료.(regular01)</p></li>
+					</ul>
+				</div>
+				<div id="function" class="content2">
+					<a href="jQuery/each01.html">each01</a><br><br>
+					<a href="jQuery/each02.html">each02</a><br><br>
+					<a href="jQuery/hide01.html">hide01</a><br><br>
+					<a href="jQuery/hide02.html">hide02</a><br><br>
+					<a href="jQuery/hide03.html">hide03</a><br><br>
+					<a href="jQuery/hide04.html">hide04</a><br><br>
+					<a href="jQuery/text_html01.html">text_html01</a><br><br>
+					<a href="jQuery/text_html02.html">text_html02</a><br><br>
+					<a href="jQuery/toggle01.html">toggle01</a><br><br>
+					<p>설명: 여러함수들</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$.each(list,function(index,value){})</p></li>
+						<li><p>$('태그 또는 선택자').append('붙일값')</p></li>
+						<li><p>$('태그 또는 선택자').hide()</p></li>
+						<li><p>$('태그 또는 선택자').show()</p></li>
+						<li><p>$('태그 또는 선택자').text()</p></li>
+						<li><p>$('태그 또는 선택자').html()</p></li>
+						<li><p>$('태그 또는 선택자').toggle()</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>$.each(list,function(index,value){})는 배열요소들의 처리를 위한 기본 예제로서 함수 안에서 index와 value를 이용해서 원하는 과정을 처리한다.(each01)</p></li>
+						<li><p>$('태그 또는 선택자').append('붙일값')는 태그 또는 선택자뒤에 html코드상으로 붙일값을 적용한다.(each01)</p></li>
+						<li><p>array = [{name:'naver',link:'http://www.naver.com'}]<-이런식으로 키값과 저장된 값으로 원소를 지정할 수 있다.(each02)</p></li>
+						<li><p>$('태그 또는 선택자').hide()는 태그 또는 선택자를 웹상에서 감춘다.(hide01)</p></li>
+						<li><p>$('태그 또는 선택자').show()는 태그 또는 선택자를 웹상에 나타나게 한다.(hide02)</p></li>
+						<li><p>jQuery상에서는 버튼뿐만아니라 &lt;p&gt;태그도 클릭 이벤트 설정이 가능하다.(hide03)</p></li>
+						<li><p>$('태그 또는 선택자').text()는 모든 태그 또는 선택자의 내용을 읽어온다.(text_html01)</p></li>
+						<li><p>$('태그 또는 선택자').text()는 &lt;&gt;를 문자로 인식해 그대로 출력한다.(text_html02)</p></li>
+						<li><p>$('태그 또는 선택자').html()첫번째 태그 또는 선택자의 내용만 읽어온다.(text_html01)</p></li>
+						<li><p>$('태그 또는 선택자').html()는 &lt;&gt;를 태그로 인식해 태그 처리한다.(text_html02)</p></li>
+						<li><p>$('태그 또는 선택자').toggle()은 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 합니다.(toggle01)</p></li>
+					</ul>
+				</div>
+				<div id="inputform" class="content2">
+					<a href="jQuery/loginform.html">loginform</a><br><br>
+					<a href="jQuery/boardform.html">boardform</a><br><br>
+					<a href="jQuery/memberform.html">memberform</a><br><br>
+					<p>설명: 입력 양식 유효성 검사 실습</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$.trim($('태그 또는 선택자'))</p></li>
+						<li><p>window.open("팝업창에 실행될 문서명","윈도우 이름","옵션"))</p></li>
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>$.trim()은 양옆의 공백을 지운다.(loginform)</p></li>
+						<li><p>window.open()는 새창을 여는 함수이다.(memberform)</p></li>
+						<li><p>문서명(idcheck.jsp)뒤에 붙는 (?id=)는 변수이름id에 값을 넘겨준다는 의미이다.(memberform)</p></li>
+						<li><p>input:radio[name='gender']:checked->input태그의 타입이 radio인데 name값이 gender이면서 체크된 것을 가져와라.(memberform)</p></li>
+					</ul>
+				</div>
+				
+				<div id="ajax" class="content2">
+					<a href="jQuery/ajax/load01.html">load01</a><br><br>
+					<a href="jQuery/ajax/load02.html">load02</a><br><br>
+					<a href="jQuery/ajax/load03.html">load03</a><br><br>
+					<a href="jQuery/ajax/ajax01.html">ajax01</a><br><br>
+					<a href="jQuery/ajax/ajax02.html">ajax02</a><br><br>
+					<a href="jQuery/ajax/ajax03.html">ajax03</a><br><br>
+					<a href="jQuery/ajax/post01.html">post01</a><br><br>
+					<a href="jQuery/ajax/get01.html">get01</a><br><br>
+					<a href="jQuery/ajax/getjson01.html">getjson01</a><br><br>
+					<p>설명: jquery를 이용한 ajax</p>
+					<p>사용하는 함수</p>
+					<ul>
+						<li><p>$('태그 또는 선택자').load('파일')</p></li>
+						<li><p>window.open("팝업창에 실행될 문서명","윈도우 이름","옵션"))</p></li>
+						<li><p> $.ajax({<br> 
+ 											url : "전송 페이지",<br> 
+ 											type : "전송 방식(get, post방식),<br> 
+											data : "전송할 데이터",<br> 
+ 											dataType : "요청한 데이터타입("html","xml","json","text"),<br> 
+ 											success : function(result){<br> 
+													콜백함수로  돌려 받은 후 실행될 문장;<br> 
+											}<br> 
+								}); 
+						</p></li>
+						<li><P>$.post( 
+										"요청할 파일명",<br>
+										{ “key” : value } ,<br>
+										function(msg){<br>
+											콜백함수로  돌려 받은 후 실행될 문장;<br>
+ 										}<br>
+								);
+						</P></li>
+						<li><p>$.get(<br>
+										"요청할 파일명",<br>
+										function(data){<br>
+											콜백함수로  돌려 받은 후 실행될 문장;<br>
+										}<br>
+								);
+						</p></li>
+						<li><p>$.getJSON( <br>
+											"요청할 json파일명",<br>
+ 											function(data, textStatus){<br>
+												콜백함수로  돌려 받은 후 실행될 문장;<br>
+ 											}<br>
+ 								);
+						</p></li>
+											
+					</ul>
+					<p>추가적인 설명</p>
+					<ul>
+						<li><p>.load()는 해당 파일의 내용을 태그 또는 선택자에 출력하는 함수이다.(load01)</p></li>
+						<li><p>.load()에 파일자리에 'menu.html li'와 같이 후손 선택자 형식이 와도 정상적으로 실행된다.(load03)</p></li>
+						<li><p>$.ajax()에 data는 전송할 데이터가 있을때, datatype은 받을 데이터가 있을때만 사용한다.(ajax01)</p></li>
+						<li><p>xml파일은 반드시 1개의 루트만 가진다.(get01)</p></li>
+						<li><p>get01 jquery내의 코드 흐름은 다음과 같다. 태그값을 테이블의 제일 위에 두고 item값을 찾는데, 여러개이므로 each통해서 각각 함수를 실행하며 item태그 안에 있는 속성인
+								 id과 name을 attr을 통해서 찾아서 출력, item태그 하위 태그인 price와 description을 find함수를 찾아서 출력한다.(get01)</p></li>
+						<li><p>getjson콜백함수의 매개변수 textStatus는 불러오기를 성공했으면 success보낸다.(getjson01)</p></li>
+						<li><p>ajax03은 getjson함수를 ajax로 불러온 것이다.(ajax03)</p></li>
+					</ul>
+				</div>
+			</div>
+			<!-- endofcontent -->
+		</div>
+		<!-- endofwrap -->
+	
+	<script src="mystudy_js_v2.js"> </script>
+
+
+</body>
+</html>
