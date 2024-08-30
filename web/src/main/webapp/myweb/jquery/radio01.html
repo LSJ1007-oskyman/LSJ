@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>radio 객체</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+//is(':checked')
+//1.radid,checkbox의 선택여부를 판별할때 사용되는 함수
+//2.선택이 되면 true,선택되지 않으면 false값을 리턴한다.
+
+	$(document).ready(function(){
+		$('#b1').click(function(){
+			if($('#male').is(':checked')==false && $('#female').is(':checked')==false){
+				alert('성별을 선택 하세요.');
+				return false;
+			}
+		});
+	});
+</script>
+
+</head>
+<body>
+성별:
+	<input type="radio" id="male" name="gender" value="남자"> 남자
+	<input type="radio" id="female" name="gender" value="여자"> 여자
+	<br><br>
+	<input type="button" value="가입" id="b1">
+</body>
+</html>

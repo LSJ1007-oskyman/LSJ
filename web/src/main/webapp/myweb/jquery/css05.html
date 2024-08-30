@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function(){
+		//li태그의 모든 후손 태그를 구해와서 css적용
+		$('li *').css('color','green');
+		
+	})
+</script>
+</head>
+<body>
+	<ul>
+		<li><strong>테스트</strong>테스트 테스트 테스트 테스트</li>
+		<li><em>테스트</em>테스트 테스트 테스트 테스트</li>
+		<li><span>테스트</span>테스트 테스트 테스트 테스트</li>
+		<li>테스트 테스트 테스트 테스트 테스트</li>
+	</ul>
+</body>
+</html>

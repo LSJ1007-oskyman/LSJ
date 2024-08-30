@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 객체</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('form').submit(function(){
+			if($('#id').val()==''){
+				alert('ID를 먼저 입력 하세요');
+				$('#id').focus();
+				return false;
+			}
+		});
+	});
+</script>
+
+</head>
+<body>
+	<form id="myform" method="post" action="send.jsp">
+		<table border="1" align="center">
+			<tr>
+				<th>ID</th>
+				<td><input type="text" id="id" name="id"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="가입">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

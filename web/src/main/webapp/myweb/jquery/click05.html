@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>click 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('a').click(function(){	//모든 a태그를 구해온다.
+	
+			//this는 이벤트를 발생시킨 태그를 의미한다.
+			//$(this)는 이벤트를 발생시킨 a태그를 구해온다.
+			$('img').attr('src',$(this).attr('href'))
+					.attr('title',$(this).text());
+			return false;
+		});
+	});
+</script>
+
+</head>
+<body>
+	<ul>
+		<li><a href="img/flower.jpg">꽃</a></li>
+		<li><a href="img/sea.jpg">바다</a></li>
+		<li><a href="img/Jellyfish.jpg">해파리</a></li>
+		<li><a href="img/building.jpg">건물</a></li>
+	</ul>
+	<p><img src="img/flower.jpg" title="꽃"></p>
+</body>
+</html>

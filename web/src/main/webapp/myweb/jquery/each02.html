@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		var array = [{name:'naver',link:'http://www.naver.com'},
+					 {name:'kakao',link:'http://www.kakao.com'},
+					 {name:'google',link:'http://www.google.com'},
+					 {name:'apple',link:'http://www.apple.com'}];
+		var output='';
+		$.each(array,function(index,item){
+			output+='<a href="'+item.link+'">';
+			output +='<h1>'+item.name+'</h1>';
+			output +='</a>';
+		});
+		
+		//태그를 활성화 시키면서 출력하려면 html함수를 써야한다.
+		
+		$('div').html(output);
+	});
+	
+</script>
+
+</head>
+<body>
+	<div></div>
+</body>
+</html>

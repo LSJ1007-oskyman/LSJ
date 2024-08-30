@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		//더블클릭 이벤트를 처리 할떄는 dblclick()함수를 사용해서 처리한다.
+		$('button').dblclick(function(){
+			$('img').attr('src','img/sea.jpg')
+					.attr('title','바다');
+		});
+	});
+</script>
+</head>
+<body>
+	<button>화면을 변경</button>
+	<p><img src="img/flower.jpg" title="꽃"></p>
+</body>
+</html>

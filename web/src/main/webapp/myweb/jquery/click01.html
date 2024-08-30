@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+// 		$('input').click();
+		$('#b1').click(function(){
+			$('img').attr('src','img/sea.jpg')
+					.attr('title','바다')
+					.attr('width',250)
+					.attr('height',200);
+			alert("그림이 바꼈습니다.")
+		});
+	});
+</script>
+
+</head>
+<body>
+	<input type="button" value="화면을 변경" id='b1'><p><img src="img/flower.jpg" title="꽃"></p>
+</body>
+</html>
