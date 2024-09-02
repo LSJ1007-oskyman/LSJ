@@ -1,0 +1,35 @@
+* DML명령어
+
+1. insert (데이터 입력)
+
+  형식:  insert into 테이블명(컬럼1, 컬럼2,..) values(데이터1, 데이터2,...);
+
+         insert into 테이블명 values(데이터1, 데이터2,...);
+
+     ex)  insert into dept01(deptno, dname, loc) values(10,'ACCOUNTING', 'NEW_YORK'); 
+           insert into dept01(dname, loc, deptno) values('RESEARCH', 'DALLAS', 20); 
+           insert into dept01 values(30, 'SALES', 'CHICAGO');
+           insert into dept01 values(40, 'OPERATIONS','BOSTON');
+
+
+
+2. update (데이터 수정)
+   형식: update 테이블명 set 컬럼1=수정할값1,
+		            컬럼2=수정할값2,...
+           where 조건절;
+
+
+3. delete (데이터 삭제)
+   형식:  delete from 테이블명 where 조건절;
+
+
+
+
+
+
+
+
+
+
+
+

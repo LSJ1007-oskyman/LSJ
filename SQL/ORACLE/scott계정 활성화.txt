@@ -1,0 +1,13 @@
+scott계정 활성화
+
+c:\> sqlplus system/oracle
+
+SQL> @c:\scott.sql
+
+SQL> alter user scott identified by tiger;
+
+SQL> conn scott/tiger (scott계정으로 전환)
+
+SQL> select * from tab; (테이블 목록)
+
+SQL> quit; (종료)
