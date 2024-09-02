@@ -1,12 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Mycomponent from './MyComponent';
-import Mycomponent2 from './MyComponent2';
+import MyComponent from './MyComponent';
+import MyComponent2 from './MyComponent2';
+import MyComponent3 from './MyComponent3';
+import MyComponent4 from './MyComponent4';
+import MyComponent5 from './MyComponent5';
+import MyComponent6 from './MyComponent6';
 
 const App= () =>{
   /* return <Mycomponent/> */
-  return <Mycomponent2 name="React"/>
+  /* return <Mycomponent2 name="React"/> */
+  /* return <Mycomponent3 name="React">리액트</Mycomponent3> */
+  /* return <MyComponent4 name="React">리액트</MyComponent4> */
+  /* return <MyComponent5 name="React" favoriteNumber={3}>리액트</MyComponent5> */
+  return <MyComponent6 name="React" favoriteNumber={3}>리액트</MyComponent6>
 }
 
 export default App;
