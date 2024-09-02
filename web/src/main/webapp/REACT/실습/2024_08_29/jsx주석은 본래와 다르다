@@ -1,0 +1,14 @@
+//jsx 주석 단추키: Ctrl+Shift+/
+
+function App8(){
+    //const name = '리액트';
+    return(
+        <div>
+            {/*jsx주석문 입니다. */}
+            {/* {<div>{name}</div>} */}
+            //이런 주석이나
+            /*이런 주석은 페이지에 그대로 나타나게 됩니다.*/
+        </div>
+    );
+}
+export default App8;
