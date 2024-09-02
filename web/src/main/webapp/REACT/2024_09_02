@@ -1,2 +1,5 @@
 1.카멜표기법으로 CSS설정을 하자.
 2.css파일 상에서는 본래 HTML에서 했던것처럼 설정하면된다.
+3.외부 CSS파일을 불러올때 class속성대신에 className속성을 사용해야한다.
+예를 들어 css파일에 .react선택자 css속성을 설정하면
+설정하고싶은 객체에 <div className='react'>와 같이 지정해야한다.
