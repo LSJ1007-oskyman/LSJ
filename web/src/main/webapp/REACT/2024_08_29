@@ -1,4 +1,40 @@
-REACT는 APP.js에서 구현하고 index.js에서 띄워준다.
+ React ?
+ 1. React는 메타(구 페이스북)에서 만든 오픈소스 자바스크립트 
+UI 라이브러리이다.
+ 2. React는 2013년도에 처음 출시 되었으며, 출시된 이후에 사용률이 
+점점 증가되고 있으며, 현재 가장 많이 사용되는 자바스크립트 UI 
+라이브러리가 되었다.
+ 3. React는 자바스크립트 라이브러리로 SPA(Single Page Application)을
+위한사용자인터페이스를구축하는데사용된다.
+
+React 장점
+1. 가상 DOM 을 통한 효율적인 렌더링
+2. 컴포넌트 기반 아키텍처 (클래스형 컴포넌트, 함수형 컴포넌트)
+현재는 함수형 컴포넌트만 사용되고 있다.
+3. 가독성과 유지보수 용의
+4. 방대한 생태계와 활발한 커뮤니티
+5. 리액트 네이티브(React Native)를 사용하여 모바일 앱 개발도 가능
+
+SPA(Single Page Application)
+ 1. 클라이언트는 자바스크립트와 URL을 이용해서 서버에게 데이터를 요청
+하고 응답을 받는다.
+ 2. SPA 에서는 웹 페이지가 자바스크립트를 이용해서 렌더링 된다.
+ 3. 서버는 URL을 통해서 들어온 요청에 대한 응답만 해준다.
+ 4. 요청 형식으로는 GET, POST, PUT, DELETE 등이 있다
+
+React 단점
+1. 방대한 학습량과 복잡성
+2. 높은 상태관리의 복잡도
+
+▪ node_modules 디렉토리 : 노드 모듈 디렉토리
+▪ public 디렉토리 : 정적인 파일을 저장하기 위한 디렉토리
+  index.html: 처음 화면에 출력되는 화면
+▪ src : 소스 파일이 위치하는 디렉토리
+  App.js: 첫 화면에 보여질 컴포넌트
+  App.css: App 컴포넌트의 디자인
+  App.test.js: App을 테스트하기 위한 파일
+  index.css: Entry Point 의 디자인
+  index.js: Entry Point
 
 1.REACT는 ROOT태그를 반드시 한개만 필요하다.(2개하면 오류)->XML의 유산
 2.RETURN문 밖에서는 변수 선언이 가능하다.
@@ -7,3 +43,4 @@ REACT는 APP.js에서 구현하고 index.js에서 띄워준다.
 5.RETURN문 안에서는 AND연산자 &&사용가능하다.
 6.RETURN문 안에서 주석구문은{/**/}로 표현한다.
 7.RETURN문 밖에서는 if문을 정상적으로 사용가능하다.
+8.APP.js마지막에 EXPORT(export default 파일이름;)를 해야 index.js가 import 가능하다.
