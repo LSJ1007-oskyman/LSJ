@@ -1,0 +1,16 @@
+import './App.css';
+
+
+function App6(){
+    const name = '리액트';
+
+    return(
+        <div>
+            <div className='react'>{name}</div>
+        </div>
+
+    );
+
+}
+
+export default App6;
