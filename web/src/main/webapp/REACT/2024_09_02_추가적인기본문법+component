@@ -79,4 +79,7 @@ useState
  2. 리턴되는 배열의 첫 번째 항목은 state로 선언된 변수이고, 두 번째 항목은
     해당 state의 set함수이다.
 
+- 헤드에 import React, {useState} from "react";넣어야한다.
+- 클릭이밴트는 <button onClick={()=>setCount(count+1)}>클릭</button>이런식으로 하면된다.
+
 
