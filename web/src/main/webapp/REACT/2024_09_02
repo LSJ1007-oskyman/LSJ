@@ -4,4 +4,4 @@
 예를 들어 css파일에 .react선택자 css속성을 설정하면
 설정하고싶은 객체에 <div className='react'>와 같이 지정해야한다.
 4.REACT프로젝트 상에서는 열린 태그는 반드시 닫아 주어야 한다.
-본래 HTML상에서는 <input>을 닫을필요가 없었는데 REACT에서는 반드시 닫아야한다.
+본래 HTML상에서는 <input><br>을 닫을필요가 없었는데 REACT에서는 반드시 닫아야한다.
