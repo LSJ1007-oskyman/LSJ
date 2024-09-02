@@ -1,0 +1,11 @@
+import React from "react";
+
+const Mycomponent2= (props)=>{
+    return(
+        <div>
+            <h1>안녕 하세요?</h1>
+            <h1>제 이름은 {props.name}입니다.</h1>
+        </div>
+    );
+}
+export default Mycomponent2;
