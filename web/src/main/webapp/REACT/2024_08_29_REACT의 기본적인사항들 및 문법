@@ -45,3 +45,4 @@ React 단점
 7.RETURN문 밖에서는 if문을 정상적으로 사용가능하다.
 8.APP.js마지막에 EXPORT(export default 파일이름;)를 해야 index.js가 import 가능하다.
 9.파일 이름의 첫글자는 반드시 대문자로 하자.
+10. RETURN문 안에서 변수명을 출력할때는 반드시 {}안에 넣어서 출력해야한다.
