@@ -39,3 +39,4 @@ component
 - ES6의 비구조화 할당 문법을 통해서 const {name , children} = props;이런식으로 매개변수를 할당할 수 있다.
 - 함수컴포넌트 선언시 const MyComponent5= ({name,children,favoriteNumber}) =>이런식으로 매개변수를 바로 받아서 사용할 수 있다.
 - 부모컴포넌트에서 숫자값을 전달할때는 {}로 감싸줘야한다.
+- 사용자정의로 만든 매개변수로 값 전달하는것도 가능하다.
