@@ -35,6 +35,7 @@ component
 - 자식컴포넌트가 부모컴포넌트의 매개변수를 받을때는 props로 받으면된다.
   props.매개변수명 형태이다.
 - 자식컴포넌트가 부모컴포넌트의 태그 사이의 값을 받을 때는 props.children으로 받는다.
+- name과 children은 정해진 변수 명이여서 바꿀수 없다.
 - ES6의 비구조화 할당 문법을 통해서 const {name , children} = props;이런식으로 매개변수를 할당할 수 있다.
 - 함수컴포넌트 선언시 const MyComponent5= ({name,children,favoriteNumber}) =>이런식으로 매개변수를 바로 받아서 사용할 수 있다.
 - 부모컴포넌트에서 숫자값을 전달할때는 {}로 감싸줘야한다.
