@@ -1,0 +1,20 @@
+//CSS를 설정할때 속성명을 카멜 표기법으로 작성해야 한다.
+function App5(){
+    const name = '리액트';
+    const style = {
+        backgroundColor:'black',
+        color:'aqua',
+        fontSize:'48px',
+        fontWeight:'bold',
+        padding:16
+    }
+
+    return (
+        <div style={style}>
+            {name}
+        </div>
+    );
+
+}
+
+export default App5;
