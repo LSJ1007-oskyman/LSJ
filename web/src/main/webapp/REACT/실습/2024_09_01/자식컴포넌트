@@ -1,0 +1,12 @@
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+import Mycomponent from './MyComponent';
+import Mycomponent2 from './MyComponent2';
+
+const App= () =>{
+  /* return <Mycomponent/> */
+  return <Mycomponent2 name="React"/>
+}
+
+export default App;
