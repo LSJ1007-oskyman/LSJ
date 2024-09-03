@@ -12,11 +12,13 @@ const Info2=()=>{
         setNickname(e.target.value);
     }
 
-    useEffect(()=>{
+   /*  useEffect(()=>{
         console.log('렌더링이 완료 되었습니다.');
         console.log({name,nickname});
-    });
+    }); */
 
+    //useEffect훅으로 처음 렌더링 될때만 실행하고 업데이트될 때는 실행하지 않으려면
+    //useEffect함수의 두번째 파라미터를 비어있는 배열로 설정하면 된다.
     useEffect(()=>{
         console.log('마운트될 때만 실행됩니다.');
     },[]);
