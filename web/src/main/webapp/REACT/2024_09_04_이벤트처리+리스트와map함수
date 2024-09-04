@@ -20,4 +20,21 @@ subject.map((name, index)=>{
 <li key={index}>{name}</li>
  })
 
- 
+- list01/Main.js
+1. JSX 구문 안에서 javascript 구문은 { }으로 감싸져야 합니다.
+2. render() 의 return값은 항상 한 덩어리여야 합니다.
+3. key값은 구분만을 위해 존재한다.
+
+- list01/AttendanceBook.js
+1. 리스트 안에 임의의 값을 설정해서 불러올수도 있다. {id:1,name:'홍길동'}, <li key={student.id}>{student.name}</li>
+2. 리스트 안에 요소들은 사용자 정의의 임의의 값을 반드시 가져야할 필요는 없음
+3. 중간에 새로운 사용자 정의의 임의의 값을 넣을 수도 있음
+
+-list02/App.js
+1. const nameList1=names1.map(   (name)      =>       (< Main1     name                            ={name}/>));
+                              매개변수name->변경가능         props속성중하나인name->변경불가      매개변수name->변경가능
+   const nameList1=names1.map((n)=>(< Main1 name={n}/>)); 이런식으로 쓸수도 있다.
+2. 2차원 배열일때는  const nameList2=names2.map((v)=>(<Main2 name={v[0]} age={v[1]}/>));이런식으로 전달 한다.
+3. 사용자 정의 변수를 선언했을땐 const nameList3=names3.map((v)=>(<Main3 name={v.userName} age={v.age}/>));이런식으로 전달가능하다.
+4. 여기서 map((v)=> 코드에 매개변수 v는 리스트의 요소를 1개씩 차례로 가져오는 것이다.
+5. filter함수를 통해서 조건을 만족하는 데이터만 전달할 수 있다.
