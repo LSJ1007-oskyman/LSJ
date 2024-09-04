@@ -13,11 +13,15 @@ function App() {
   const nameList2=names2.map((v)=>(<Main2 name={v[0]} age={v[1]}/>));
   const nameList3=names3.map((v)=>(<Main3 name={v.userName} age={v.age}/>));
 
+  //filter함수를 이용해서 age가 30보다 큰데이터만 자식 컴포넌트에게 전달하기
+  let nameList4=names3.filter(v=>v.age>30);//저 nameList4는 다음 코드에 재사용하기 위해서 let로 선언
+  nameList4= nameList4.map((v)=>(<Main3 name={v.userName} age={v.age}/>))
   return (
     <div className='App'>
       {nameList1}<hr/>
       {nameList2}<hr/>
       {nameList3}<hr/>
+      {nameList4}<hr/>
     </div>
   );
 }
