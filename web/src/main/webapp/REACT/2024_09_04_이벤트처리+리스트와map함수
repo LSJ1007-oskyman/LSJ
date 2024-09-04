@@ -30,7 +30,7 @@ subject.map((name, index)=>{
 2. 리스트 안에 요소들은 사용자 정의의 임의의 값을 반드시 가져야할 필요는 없음
 3. 중간에 새로운 사용자 정의의 임의의 값을 넣을 수도 있음
 
--list02/App.js
+-list02/App.js+list02/Main1.js+list02/Main2.js+list02/Main3.js
 1. const nameList1=names1.map(   (name)      =>       (< Main1     name                            ={name}/>));
                               매개변수name->변경가능         props속성중하나인name->변경불가      매개변수name->변경가능
    const nameList1=names1.map((n)=>(< Main1 name={n}/>)); 이런식으로 쓸수도 있다.
@@ -38,3 +38,4 @@ subject.map((name, index)=>{
 3. 사용자 정의 변수를 선언했을땐 const nameList3=names3.map((v)=>(<Main3 name={v.userName} age={v.age}/>));이런식으로 전달가능하다.
 4. 여기서 map((v)=> 코드에 매개변수 v는 리스트의 요소를 1개씩 차례로 가져오는 것이다.
 5. filter함수를 통해서 조건을 만족하는 데이터만 전달할 수 있다.
+6. App.js코드상에 nameList4를 let로 선언한 이유는 다음 코드에 재사용하기 위해서다(const는 재사용안됌)
