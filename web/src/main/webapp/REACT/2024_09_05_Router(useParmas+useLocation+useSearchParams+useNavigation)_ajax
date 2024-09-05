@@ -79,3 +79,39 @@ useSearchParams
  1. Link태그를 사용하지 않고 뒤로가기 등에 사용하는훅(Hooks) 이다.
  2. <button onClick={()=>navigate(1)}>go forward</button>와 같이 안에 숫자를 넣으면 양수면 앞선 페이지로 음수면 뒷페이지로 이동한다.
  3. <button onClick={()=>navigate('/')}>와 같이 안에 Route의 path값을 넣어 알아서 찾아가도록 할수도 있다.
+
+React  Ajax
+1. Ajax는 Asynchronous Javascript And XML의 약자이다. 
+   말 그대로, 비동기 자바스크립트와 XML이라는 뜻이다.
+2. 2005년 Jesse James Garett가 처음 만들어낸 말로, HTML, XHTML, CSS,  
+   JavaScript, DOM, XMLHttpRequest객체 등을 비롯해 기존의 여러 기술을 
+   사용하는 새로운 접근법을 설명하는 용어이다.
+
+Ajax 사용하는 방법
+1. 순수 자바스크립트 문법 : fetch()
+2. jQuery 설치 : $.ajax()
+3. axios 설치 : axios.get()
+
+ axios 사용법
+1. axios는 ajax를 구현하기 위한 대표적인 라이브러리이다.
+
+2. jQuery ajax 라이브러리와 비슷한 기능을 지원한다. 
+
+3. 브라우저, node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리이다.
+
+4. Promise객체를 리턴하고, 크로스 브라우징 기반으로 브라우저 호환성이 좋다.
+
+5. 자동으로 JSON 데이터 형식으로 변환, 요청 취소 및 타임아웃 설정이 가능하다.
+
+axios의 request method
+▪ GET : axios.get(url[, config]) - 조회
+▪ POST : axios.post(url, data[, config]) - 생성
+▪ PUT : axios.put(url, data[, config]) - 수정
+▪ DELET : axios.delete(url[, config]) - 삭제
+
+
+axios 사용법
+▪ 데이터 요청 성공- 형식 : axios.get(데이터 요청할 URL)
+ .then( ()=>{ 요청 성공시 실행할 코드 } )- then() 안에 있는 코드가 실행된다.
+▪ 데이터 요청 실패-형식 : axios.get(데이터 요청할 URL)
+ .catch( ()=>{ 요청 실패시 실행할 코드 } )- catch() 안에 있는 코드가 실행된다.
