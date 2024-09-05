@@ -32,4 +32,9 @@ const { 파라미터명 } = useParams();
      const {productId} = useParams(); 
       //2. const 변수명 = useParams().파라미터명;
        const param = useParams().productId;
+2. 파라미터를 받는 방법은 2가지로
+   //1. const {파라미터명} = useParams();
+        const {productId} = useParams(); 
+   //2. const 변수명 = useParams().파라미터명;
+        const param = useParams().productId;
        
