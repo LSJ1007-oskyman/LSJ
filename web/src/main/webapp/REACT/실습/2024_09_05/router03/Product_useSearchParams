@@ -1,0 +1,25 @@
+import React from "react";
+import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+
+const Product = (props) => {
+    const { productId } = useParams();
+    const[searchParams,setSearchParams] = useSearchParams();
+    const search =searchParams.get('search');
+    const q= searchParams.get('q');
+
+
+    return (
+        <div>
+            <h3>{productId}번 상품 페이지 입니다.(Product.js)</h3>
+            <h3>useSearchParams</h3>
+            <ul>
+                <li>search : {search}</li>
+                <li>q : {q}</li>
+            </ul>
+        </div>
+    );
+}
+
+export default Product;
