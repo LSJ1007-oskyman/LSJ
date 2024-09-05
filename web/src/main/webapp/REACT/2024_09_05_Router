@@ -38,3 +38,40 @@ const { 파라미터명 } = useParams();
    //2. const 변수명 = useParams().파라미터명;
         const param = useParams().productId;
        
+쿼리 스트링
+1. 쿼리 스트링을 이용해서 유동적으로 값을 전달할 수 있다.
+
+2. URL 주소가 아래와 같을때
+   http://localhost:3000/product/1?search=productName&q=demo 
+   물음표(?) 뒤에 search=productName&q=demo가 쿼리스트링이 되는것이다.
+
+3. 쿼리스트링을 나누는 방법은 &를 사용해서 구분한다.
+
+4. 쿼리 스트링 값을 받을때 자주 사용하는 훅(hooks)
+   useLocation
+   useSearchParams
+   useNavigate
+
+useLocation
+ 1. useLocation()은 useParams()와 동일하게 현재 페이지의 쿼리스트링이 
+    반환된다.
+ 
+2. useLocation 작성은 const location = useLocation(); 으로 작성한다.
+ 
+3. useLocation에서 지원하는 속성
+   pathname : 현재 주소의 경로(쿼리스트링 제외 ?앞의값)
+   search : 맨앞에 ? 문자를 포함한 쿼리스트링 값
+   state : 페이지로 이동할때 임의로 넣을수 있는 상태값
+   key : location의 고유값, 초기에는 default이며 페이지가 변경될 때 마다 
+         고유의값이 생성된다.
+
+useSearchParams
+ 1. useSearchParams는 다음과 같이 사용한다.
+    const [searchParams, setSearchParams]=useSearchParams();
+
+ 2. useSearchParams는 get()과 set()을 사용할 수 있다.
+    http://localhost:3000/product/1?search=productName&q=demo
+    const search = searchParams.get('search’);
+    const q = searchParams.get('q');
+
+
