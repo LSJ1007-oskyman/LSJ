@@ -1,0 +1,14 @@
+Json파일에서 데이터 불러오기
+ - ajaxtest01/Item.js
+
+ 서버측에 데이터 요청하기
+ - ajaxtest01/Main3.js
+
+ 서버측에 데이터 여러개 요청하기
+  - ajaxtest01/Main4.js
+  
+  서버측에 값 넘기기
+  - ajaxtest01/Main5.js
+
+  서버측에 여러개의 값 넘기기
+  - ajaxtest01/Main6.js
