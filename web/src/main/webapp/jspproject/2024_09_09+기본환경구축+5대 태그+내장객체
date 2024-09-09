@@ -37,3 +37,7 @@ JSP스크립트 주석: JSP태그 안에서만 기술 가능(스크립트릿,표
 
 *내장객체의 메서드나 필드는 기본API(JAVA SE)에서는 알려주지 않아서 JAVA EE에서 찾아봐야한다.
 *html태그의 name값을 JSP에서 전달하는 값으로 쓴다.
+*JSP로 전달하는 name값은 대소문자를 구분하므로 반드시 주의해서 사용해야한다.
+*post방식은 한글값이넘어갈때는 request.setCharacterEncoding("utf-8");통해서 인코딩해야한다. --->근데 버전이 높아지면서 알아서 인코딩을 해준다!!
+*get방식은 tomcat상에서 알아서 인코딩해준다.
+*<%@ page contentType="text/html;charset=utf-8"%> 이건 현재 JSP파일의 한글값을 인코딩해주는 코드이다.
