@@ -1,0 +1,7 @@
+회원가입 양식
+
+-broad
+*textarea상에 입력할때 단순히 <%=%>태그로 출력하면 줄 띄어쓰기는 무시되고 붙어서 나온다
+*textarea상에 입력할때 줄을 띄어쓰기한것 그대로 JSP에서 받아서 출력하려면 
+  1.<pre><%=content %></pre>와 같이 <pre>태그를 둘러서 출력한다.
+  2.String에 replace매소드를 이용해서 replace("\n","<br>")로 HTML 줄 바꿈으로 바꾼다.
