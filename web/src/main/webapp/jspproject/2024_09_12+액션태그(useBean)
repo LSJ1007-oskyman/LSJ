@@ -1,0 +1,21 @@
+useBean
+
+- 2가지 방법으로 useBean생성가능
+  1.<%@ page contentType="text/html; charset=utf-8" %>    <<--반드시 import해야 SimpleBean클래스 사용가능
+    <%
+	    SimpleBean sb1 = new SimpleBean();
+	    sb1.setMsg("안녕");
+    %>
+  2.<jsp:useBean id="sb" class="javaBean.SimpleBean"/>   <<---직접 접근해서 사용하므로 import안해도됌
+    <jsp:setProperty property="msg" name="sb"/>
+    <jsp:setProperty property="name" name="sb"/>
+
+- 매번 jsp:setProperty를 property값마다 선언하기 귀찮으므로
+  <jsp:setProperty property="*" name="sb"/>를 통해서 모든 변수를 한번에 setter메소드로 변경가능하다.
+  단 앞쪽에 데이터(form쪽의)를 받을때의 변수와 property의 이름값이 반드시 같아야 아래와 같이 가능하다.
+
+- 나중에는 <jsp:getProperty name="sb" property="name" />으로 출력하지 않는다.
+  DAO에서 출력할때가 많은데 DAO는 JSP에서 생성하지 않으므로 액션태그 사용이 불가능하다.
+  또 액션태그는 이미 정해진 포맷으로 변경이 불가능하다.
+
+  
