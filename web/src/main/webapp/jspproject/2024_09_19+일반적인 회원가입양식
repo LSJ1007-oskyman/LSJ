@@ -1,3 +1,15 @@
 일반적인 회원가입 양식
 
+* 컨넥션 풀에서 컨넥션을 구해오기 위한 헤드
+  import javax.naming.Context;
+  import javax.naming.InitialContext;
+  import javax.sql.DataSource;
+
+* 컨넥션풀에서 컨넥션을 구해오는 메소드
+	private Connection getConnection() throws Exception{ <<--반드시 예외처리 해줘야 실행된다.
+		Context init = new InitialContext();
+  		DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/orcl");
+  		return ds.getConnection();
+	}
+
 * 웹브라우저에 출력되는 값이 callback함수로 리턴된다.
