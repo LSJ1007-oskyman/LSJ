@@ -1,5 +1,23 @@
-일반적인 회원가입 양식
+컨넥션 풀을 통한 일반적인 회원가입 양식
 
+* 컨넥션 풀로 DB와 연결하기 위해서는 META-INF파일에 context.xml파일을 추가해야한다.
+
+* context.xml안에는
+
+  <Context> 
+  <Resource name="jdbc/orcl" <<---context.xml를 찾기위한 이름
+   auth="Container"
+   type="javax.sql.DataSource" 
+   username="totoro" <<----DB계정 이름
+   password="totoro123"  <<---DB계정 비밀번호
+   driverClassName="oracle.jdbc.driver.OracleDriver"
+   factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+   url="jdbc:oracle:thin:@localhost:1521:xe"
+   maxActive="500"  <<----최대 연결 갯수
+   maxIdle="100"/>  <<----활성화 갯수
+</Context>
+
+  
 * 컨넥션 풀에서 컨넥션을 구해오기 위한 헤드
   import javax.naming.Context;
   import javax.naming.InitialContext;
