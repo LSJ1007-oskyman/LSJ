@@ -10,9 +10,9 @@
    type="javax.sql.DataSource" 
    username="totoro" <<----DB계정 이름
    password="totoro123"  <<---DB계정 비밀번호
-   driverClassName="oracle.jdbc.driver.OracleDriver"
+   driverClassName="oracle.jdbc.driver.OracleDriver"	<<<------드라이버 위치
    factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-   url="jdbc:oracle:thin:@localhost:1521:xe"
+   url="jdbc:oracle:thin:@localhost:1521:xe"    <<<--DB위치
    maxActive="500"  <<----최대 연결 갯수
    maxIdle="100"/>  <<----활성화 갯수
 </Context>
