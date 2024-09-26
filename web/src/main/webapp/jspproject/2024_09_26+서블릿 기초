@@ -1,0 +1,70 @@
+❖ MVC 패턴
+MVC는 Model / View / Controller 의 약자로 애플리케이션을 세 역할로 나누어서 개발하는 개발 방법론이다.
+
+➢ Model- 애플리케이션의데이터처리를담당함- Service 클래스 +  DAO 클래스로 구현함
+
+➢ View- 사용자인터페이스를처리함- JSP 를 이용해서 구현함 : EL(Expression Language, 표현언어) + JSTL(JSP Standard Tag Library)
+ 
+➢ Controller- 클라이언트의요청을받아Model과View사이에서흐름을조정한다.             
+  - Java Servlet으로 구현함
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+❖ Java Servlet 클래스
+➢ Java로 작성된웹프로그램을의미함
+
+➢ Java Servlet 클래스에는 HTML, JavaScript 코드를 포함할 수 있다.
+
+➢ Java Servlet 클래스는 웹브라우저로 실행 결과를 출력할 수 있다.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+❖ Java Servlet 클래스로 찾아 가는 방법
+방법1. @WebServlet(“/HelloWorld”) 어노테이션
+
+방법2. web.xml 파일의 서블릿 매핑
+<servlet>
+ <description>값전달연습</description>
+ <display-name>HelloWorld</display-name>
+ <servlet-name>HelloWorld</servlet-name>
+ <servlet-class>send.HelloWorld</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>HelloWorld</servlet-name>
+ <url-pattern>/HelloWorld</url-pattern>
+ </servlet-mapping>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+❖ Java Servlet 클래스에서 JSP페이지로 포워딩 방법
+1. Dispatcher 방식
+  RequestDispatcher dispatcher = request.getRequestDispatcher("dispatcher.jsp");
+  dispatcher.forward(request, response);
+2. Redirect 방식
+  response.sendRedirect("redirect.jsp");
+
+
+❖ Java Servlet 클래스에서 JSP페이지로 포워딩 방법 : Dispatcher 방식
+DispatcherServlet.java
+  request.setAttribute("request","requestValue");                 // 공유 설정
+  RequestDispatcher dispatcher = request.getRequestDispatcher("dispatcher.jsp");
+  dispatcher.forward(request, response);
+  
+  dispatcher.jsp
+ request 속성 값 : <%=request.getAttribute("request") %>  // 공유한 값 구해오기
+ 
+1. 자바 서블릿 클래스에서request객체로 공유 설정후dispatcher 방식으로 JSP파일로 포워딩하면
+   JSP파일에서 request객체로 공유한 곳에 접근할 수 있다. ( request 영역 )
+2. dispatcher 방식으로 JSP파일로 포워딩하면 URL주소가 바뀌지 않는다.
+
+❖ Java Servlet 클래스에서 JSP페이지로 포워딩 방법 : Redirect 방식
+RedirectServlet.java
+  request.setAttribute("request","requestValue");           // 공유 설정       
+  response.sendRedirect("redirect.jsp");
+
+redirect.jsp
+  request 속성 값 : <%=request.getAttribute("request") %>  // 공유한 값 구해오기
+
+
+1. 자바 서블릿 클래스에서request객체로 공유 설정후redirect 방식으로 JSP파일로 포워딩하면
+   JSP파일에서 request객체로 공유한 곳에 접근할 수 없다. ( request 영역을 벗어남 )
+2. redirect 방식으로 JSP파일로 포워딩하면 URL주소가 바뀐다. 
+
+
