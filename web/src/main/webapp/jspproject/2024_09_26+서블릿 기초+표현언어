@@ -92,3 +92,18 @@ EL기본 객체
 * sessionScope(${sessionScope.id})(=<%=session.getAttribute("id")%>)
 * param(${param.name})(<%=request.getParameter("name")%>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JSTL
+* JSTL 태그 종류
+* 코어 - 접두어:c-관련 uri=http://java.sun.com/jsp/jstl/core
+* xml - 접두어:x-관련 uri=http://java.sun.com/jsp/jstl/xml
+* 국제화 - 접두어:fmt-관련 uri=http://java.sun.com/jsp/jstl/fmt
+* 데이터베이스 - 접두어:sql-관련 uri=http://java.sun.com/jsp/jstl/sql
+* 함수 - 접두어:fn - 관련 uri=http://java.sun.com/jsp/jstl/functions
+
+- 코어 라이브러리 태그
+* set(변수 설정)
+* if(조건문)
+* choose-when-otherwise(다중조건문)<-----
+* forEach
+* import
+* out
