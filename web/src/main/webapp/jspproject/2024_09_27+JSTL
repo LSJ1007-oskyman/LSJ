@@ -1,8 +1,8 @@
 코어 라이브러리
-* for each
+* for each(jspproject2/src/main/webapp/jstl/ex5)
 - var,begin,end의 변수값은 반드시 쌍따옴표로 감싸줘야한다.
 #1번 방법 <c:forEach var="변수" items="아이템"(=배열이나 list의 변수명이 들어가야함)>
-& 예) 1. 배열 선언후에 변수명으로 입력
+ 예) 1. 배열 선언후에 변수명으로 입력
       <c:set var="intArray" value="<%= new int[] {1,2,3,4,5} %>" />
       <c:forEach var="i" items="${intArray}">${i}</c:forEach>
       
@@ -14,4 +14,9 @@
       <c:forEach var="s" items="${subject}">${s}</c:forEach>
 
 #2번 방법 <c:forEach var="i" begin="1" end="10" [step="값"]>
+
+* forTokens(=StringTokenize)(jspproject2/src/main/webapp/jstl/ex6)
+<c:forTokens var="변수" items="분리할 값" delims="구분기호">
+ 예) <c:forTokens var="token" items="빨강색,주황색.노란색.초록색,파랑색,남색.보라색" delims=",."> ${token} </c:forTokens>
+
 
