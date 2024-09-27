@@ -1,0 +1,10 @@
+코어 라이브러리
+* for each
+- var,begin,end의 변수값은 반드시 쌍따옴표로 감싸줘야한다.
+#1번 방법 <c:forEach var="변수" items="아이템"(=배열이나 list의 변수명이 들어가야함)>
+& 예) 1. 배열 선언후에 변수명으로 입력
+      <c:set var="intArray" value="<%= new int[] {1,2,3,4,5} %>" />
+      <c:forEach var="i" items="${intArray}">${i}</c:forEach>
+      2. request객체로 공유 후에 그 객체명 입력
+#2번 방법 <c:forEach var="i" begin="1" end="10" [step="값"]>
+
