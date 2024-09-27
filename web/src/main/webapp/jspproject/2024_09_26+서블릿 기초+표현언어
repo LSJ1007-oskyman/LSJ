@@ -88,7 +88,7 @@ jspproject2/src/main/webapp/el/ex3
       필드로 접근하는것처럼 보이나 실제로는 내부적으로는 메서드를 호출해서 리턴을 받는 것이다.
 
 EL기본 객체
-* requestScope(${requestScope.page})
-* sessionScope(${sessionScope.id})
-* param(${param.name})
+* requestScope(${requestScope.page})(=<%=request.getAttribute("page")%>)
+* sessionScope(${sessionScope.id})(=<%=session.getAttribute("id")%>)
+* param(${param.name})(<%=request.getParameter("name")%>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
