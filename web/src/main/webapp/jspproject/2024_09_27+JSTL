@@ -5,6 +5,13 @@
 & 예) 1. 배열 선언후에 변수명으로 입력
       <c:set var="intArray" value="<%= new int[] {1,2,3,4,5} %>" />
       <c:forEach var="i" items="${intArray}">${i}</c:forEach>
-      2. request객체로 공유 후에 그 객체명 입력
+      
+      2. 공유객체(request)로 공유 후에 그 객체명 입력
+      <%
+	      String[] str= {"java","jsp","웹표준","spring","python"};
+	      request.setAttribute("subject", str);
+      %>
+      <c:forEach var="s" items="${subject}">${s}</c:forEach>
+
 #2번 방법 <c:forEach var="i" begin="1" end="10" [step="값"]>
 
