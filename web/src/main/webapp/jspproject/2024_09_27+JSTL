@@ -1,5 +1,5 @@
 코어 라이브러리
-* for each(jspproject2/src/main/webapp/jstl/ex5)
+* for each(jspproject2/src/main/webapp/jstl/core/ex5)
 - var,begin,end의 변수값은 반드시 쌍따옴표로 감싸줘야한다.
 #1번 방법 <c:forEach var="변수" items="아이템"(=배열이나 list의 변수명이 들어가야함)>
  예) 1. 배열 선언후에 변수명으로 입력
@@ -15,8 +15,54 @@
 
 #2번 방법 <c:forEach var="i" begin="1" end="10" [step="값"]>
 
-* forTokens(=StringTokenize)(jspproject2/src/main/webapp/jstl/ex6)
+* forTokens(=StringTokenize)(jspproject2/src/main/webapp/jstl/core/ex6)
 <c:forTokens var="변수" items="분리할 값" delims="구분기호">
  예) <c:forTokens var="token" items="빨강색,주황색.노란색.초록색,파랑색,남색.보라색" delims=",."> ${token} </c:forTokens>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+국제화 라이브러리(jspproject2/src/main/webapp/jstl/fmt/ex5)
+* formatdate
+ 예) <fmt:formatDate value="${now }"/><br>
+     <fmt:formatDate value="${now}" type="date" dateStyle="full" /><br>
+     <fmt:formatDate value="${now}" type="date" dateStyle="short" /><br>
+     <fmt:formatDate value="${now}" type="time" /><br>
+     <fmt:formatDate value="${now}" type="both" dateStyle="full" timeStyle="short" /><br>
+     <fmt:formatDate value="${now}" pattern="z a h:mm" /><br>
+     <!-- 12시간제 날짜, 시간 출력 -->
+     <fmt:formatDate value="${now}" pattern="yyyy-MM-dd a hh:mm:ss EEE" /><br>
+     <fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss EEE" /><br>
 
+* formatNumber
+ 예) <!-- type="number" : 3자리씩 컴마로 구분해서 출력 -->
+     <fmt:formatNumber value="${price}" type="number" var="numberType" />
+     숫자: ${numberType} <br>
 
+     <!-- type="currency" : 통화기호 출력 원표시= \\-->
+     통화: <fmt:formatNumber value="${price}" type="currency" currencySymbol="$" /><br>
+
+     <!-- type="percent" : percent(%)기호 출력 -->
+     퍼센트: <fmt:formatNumber value="${price}" type="percent" groupingUsed="true" /> <br>
+     퍼센트: <fmt:formatNumber value="${price}" type="percent" groupingUsed="false" /> <br>
+
+     패턴: <fmt:formatNumber value="${price}" pattern="00000000.00"/>
+* timeZone
+ 예) <fmt:timeZone value="Hongkong">
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+함수 라이브러리
+* contains() : 검색 대상 문자열의 포함 여부를 확인 <---대소문자 구분함
+  Hello Java Server Pages! => ${fn:contains("Hello Java Server Pages!","java")}<br><br>
+
+* containsIgnoreCase() : 대,소문자와 상관없이 검색 대상 문자열 포함 여부 확인
+  Hello Java Server Pages! => ${fn:containsIgnoreCase("Hello Java Server Pages!","java")}
+
+* split() : 문자열을 공백으로 분리하여 배열 형태로 반환
+  <c:set var="texts" value = "${fn:split('Hello Java Server Pages!',' ') }"/>
+    
+* length() : 문자열의 길이 반환
+  <!-- length(texts) : 배열의 크기(4) 구함 -->
+  <c:forEach var="i" begin="0" end="${fn:length(texts)-1}">
+  	text[${i}] = ${texts[i]}<br>
+  </c:forEach>
+    
+* join() : 배열 형태의 문자열을 구분자('-')로 연결하여 반환
+  <p><c:out value="${fn:join(texts,'-') }"/>
