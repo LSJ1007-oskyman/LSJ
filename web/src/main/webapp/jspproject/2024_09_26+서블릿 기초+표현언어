@@ -103,7 +103,7 @@ JSTL
 - 코어 라이브러리 태그
 * set(변수 설정)
 * if(조건문)
-* choose-when-otherwise(다중조건문)<-----
+* choose-when-otherwise(=default)(다중조건문)<-----조건 여러개를 만족해도 맨처음에 만나는 조건문을 실행하고 빠져나온다.
 * forEach
 * import
 * out
