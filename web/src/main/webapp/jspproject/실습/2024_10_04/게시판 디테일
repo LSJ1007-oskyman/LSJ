@@ -1,1 +1,3 @@
+*content에 줄바꾸기까지 그대로 가져오려면 replace("\n","<br>")하던가 <pre>태그를 붙여주자
 
+*forward하기전에 창을 띄고 싶으면 response.sendRedirect("./board/delete.jsp?page="+page);와 같이 새로운 jsp파일을 만들어서 alert하고 location으로 다시 컨트롤러로 보낸다.
