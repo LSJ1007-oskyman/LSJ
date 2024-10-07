@@ -11,6 +11,34 @@ src-main - java - DAO -> SQL문을 실행시키는 메소드를 제공하는 인
 
 
 * mybatis-config.xml
+  - 파일 내부 코드
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE configuration
+ 	 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	<configuration>
+		<properties resource="db.properties" />
+		<typeAliases>
+			<typeAlias type="model.Member" alias="member"></typeAlias>   <!--DTO 별칭 정하기(DTO위치하고 별칭값을 정함)-->
+		</typeAliases>
+		<environments default="development">
+			<environment id="development">
+				<transactionManager type="JDBC" />
+				<dataSource type="POOLED">
+					<!--db.properties파일에 변수 값을 불러오고 있다.(직접 하드코딩으로 값을 써도 된다.) -->
+					<property name="driver" value="${jdbc.driverClassName}" /> 
+					<property name="url" value="${jdbc.url}" />
+					<property name="username" value="${jdbc.username}" />
+					<property name="password" value="${jdbc.password}" />
+				</dataSource>
+			</environment>
+		</environments>
+		<mappers>
+	 		<!-- DTO파일 불러오기-->
+			<mapper resource="member.xml" />
+		</mappers>
+	</configuration>
+
   -  resource 파일에 JDBC설정에 필요한 값을 가지고 있는 properties를 두어서 그 값만 불러와서 설정할 수 있다.
   -  <typeAliases>태그로 DTO별칭을 설정한다
   -  <environments>태그에 JDBC설정에 필요한변수들을 설정한다.
