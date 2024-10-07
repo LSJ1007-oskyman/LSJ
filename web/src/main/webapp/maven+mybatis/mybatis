@@ -19,5 +19,40 @@ src-main - java - DAO -> SQL문을 실행시키는 메소드를 제공하는 인
 * SQL파일(예:member.xml)
   -  매핑으로 불러오는 파일이여서 <mapper>태그 안에 필요한 sql문을 작성한다.
   -  select,insert,update,delete를 미리 만들어서 사용한다.
+     예):<select id="select" parameterType="String" resultType="member">
+		      select * from member22 where id = #{id}
+	      </select>
+  -  parameterType는 날라오는 데이터의 타입, resultType은 돌려주는 데이터 타입을 의미한다.
+  -  #{}는 전에 mvc할때 dao에서 SQL설정할때 썼던 ?의 역할과 동일하다.
+  -  parameterType은 1개의 값만 불러올 수 있으며 그 값이 여러개의 데이터를 가지고 있으면 각각의 #{}에 들어간다.  
+  -  뒤에서 다시 언급하겠지만, select를 제외한 insert,update,delete은 자동으로 리턴되는 메소드여서 resultType쓰면 안된다. resultType은 오로지 select만 쓴다.
   -  mapper파일이 여러개인 경우 sql문 id값이 겹칠 수가 있는데, 이때 <mapper>태그 안에 namespace값을 사용해서 이걸 방지 할 수 있다.
     예) <mapper namespace="memberns"> // result = session.insert("memberns.insert", member);
+
+* DAO파일
+   - SqlSession는 mybatis에서 제공하는 인터페이스이름으로 SQL문 메소드를 사용할수 있게 해준다.
+   - SQL문 메소드는 총5가지의 종류로 
+      #insert - int insert()
+      #update - int update()
+      #delete - int delete()
+      #select - object selectOne():검색 결과 1개인 경우
+              - List selectList():검색 결과가 여러개인 경우
+   - 여기서 insert,update,delete는 자동으로 결과값을 반환하므로 sql파일에서  resultType쓰면 안된다.
+   - 세션을 만들기 위해서는 다음 해더들이 필요하다.
+      import org.apache.ibatis.io.Resources;
+      import org.apache.ibatis.session.SqlSession;
+      import org.apache.ibatis.session.SqlSessionFactory;
+      import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+   - 세션은 다음과 같은 메소드로 불러온다.
+      private SqlSession getSession() {
+		      SqlSession session=null;
+		      Reader reader=null;
+		      try {
+			      reader = Resources.getResourceAsReader("mybatis-config.xml");
+			      SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(reader);
+			      session = sf.openSession(true);			// auto commit
+		      } catch (IOException e) {
+			      System.out.println(e.getMessage());
+		      }
+		      return session;
+	      }
