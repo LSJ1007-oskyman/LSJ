@@ -43,6 +43,7 @@ src-main - java - DAO -> SQL문을 실행시키는 메소드를 제공하는 인
       import org.apache.ibatis.session.SqlSession;
       import org.apache.ibatis.session.SqlSessionFactory;
       import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
    - 세션은 다음과 같은 메소드로 불러온다.
       private SqlSession getSession() {
 		      SqlSession session=null;
@@ -50,7 +51,7 @@ src-main - java - DAO -> SQL문을 실행시키는 메소드를 제공하는 인
 		      try {
 			      reader = Resources.getResourceAsReader("mybatis-config.xml");
 			      SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(reader);
-			      session = sf.openSession(true);			// auto commit
+			      session = sf.openSession(true);	//false로 하면 dao코드 마지막에 commit해야한다.// auto commit
 		      } catch (IOException e) {
 			      System.out.println(e.getMessage());
 		      }
