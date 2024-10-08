@@ -14,3 +14,6 @@ servlet-context
  - 이름과 위치를 사용자 마음대로 지정할 수 있다.(web.xml은 안됌)
 
 * Handler Mapping는 이제는 어노테이션 @RequestMapping를 통해서 기능을 수행한다.
+
+* viewResolver는 servlet-context(spring환경설정파일)안에 있는 prefix와 suffix값을 반환된 뷰 파일이름값에 붙여서
+  해당 뷰파일까지 이동할수 있게 해준다.
