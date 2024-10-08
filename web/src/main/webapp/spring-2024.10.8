@@ -1,7 +1,7 @@
 * 서버가 요청을 받으면 web.xml이 시작되면서 매핑된 DispatcherServlet으로 이동되며 appServlet안에 ervlet- 
   context(spring환경설정파일),root-context(DB연동 환경설정파일)을 실행시켜준다. 이후에 어노테이션을 통해서 
-  @controller가서 정확이 어떤 요청인지 구분하여 서비스 결과값을 DispatcherServlet반환하고,DispatcherServlet은
-  반환된 값을 알맞은 뷰 파일에 전달하고, 뷰파일은 그 값들을 화면에 출력하는 형태이다.
+  @controller가서 정확이 어떤 요청인지 구분하여 서비스 결과값을 modal이나 view형태로 DispatcherServlet반환하 
+  고,DispatcherServlet은 반환된 값을 알맞은 뷰 파일에 전달하고, 뷰파일은 그 값들을 화면에 출력하는 형태이다.
 
 web.xml
  - front controller인 DispatcherServlet(appServlet)을 매핑(springtest 파일에서는  /로 해놔서 모든 요청을 받아도 DispatcherServlet(appServlet)으로 찾아가게 해준다)
