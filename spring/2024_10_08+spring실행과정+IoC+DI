@@ -55,3 +55,13 @@ DI
  - <context:component-scan base-package="sample13"/> --->base-package는 최상위 자바 폴더를 의미하므로 반드시 base-package이 이정하는 폴더 아래에 자바파일이 존재해야 주입받는다.
    1. sample13 패키지 하위 클래스를 스캔한다는 의미를 가진다.
    2. @Component, @Controller, @Service, @Repository 어노테이션 붙어있는 클래스는 @Autowired 어노테이션을 이용해서 필요한 빈 객체를 setter 메소드 없이 주입을 받는다.
+   예)  @Component //위에 조건에 만족한다
+	public class ProductServiceImpl implements ProductService {
+		@Autowired   //DAO객체로 넘어가야하므로 DAO객체를 setter메소드 없이 주입받는다.
+		private ProductDao pd;
+
+		public Product getProduct() {
+		return pd.getProduct("짜장면");
+		}
+	}
+
