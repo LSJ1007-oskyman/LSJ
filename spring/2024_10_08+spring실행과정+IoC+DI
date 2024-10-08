@@ -50,3 +50,8 @@ DI
 	<bean id="out" class="sample09.FileOutputer">
 		<property name="fileName" value="test.txt"></property>
 	</bean>
+
+* 그런데 매번 빈 객체를 만들어서 주입하자니 너무 양이 많아서 어노테이션으로 처리할때가 많다
+ - <context:component-scan base-package="sample13"/> --->base-package는 최상위 자바 폴더를 의미하므로 반드시 base-package이 이정하는 폴더 아래에 자바파일이 존재해야 주입받는다.
+   1. sample13 패키지 하위 클래스를 스캔한다는 의미를 가진다.
+   2. @Component, @Controller, @Service, @Repository 어노테이션 붙어있는 클래스는 @Autowired 어노테이션을 이용해서 필요한 빈 객체를 setter 메소드 없이 주입을 받는다.
