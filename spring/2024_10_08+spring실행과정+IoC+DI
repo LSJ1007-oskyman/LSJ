@@ -40,3 +40,13 @@ DI
 
 
 * classpath는 resources파일을 의미한다.
+
+* 아래처럼 bean객체를 ref로 불러올수도 있다.(ch01/sample09)
+  <bean id="mb" class="sample09.MessageBeanImpl">
+		<property name="name" value="홍길동"></property>
+		<property name="greet" value="Hello !"></property>
+		<property name="output" ref="out"></property>
+	</bean>
+	<bean id="out" class="sample09.FileOutputer">
+		<property name="fileName" value="test.txt"></property>
+	</bean>
