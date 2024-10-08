@@ -71,3 +71,4 @@ DI
 		}
 	}
 
+* 가입양식의 name값과 DTO객체의 필드값이 같을때 @ModelAttribute 어노테이션을 통해서 알아서 setter메소드로 값을 넣어준다.
