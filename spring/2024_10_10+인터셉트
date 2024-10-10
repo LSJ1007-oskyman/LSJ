@@ -15,6 +15,33 @@
 			<beans:ref bean="lc"/> <----LoginCheck으로 이동
 		</interceptor>
 	</interceptors>
+❖ 인터셉터구현방법
+1. abstract class  HandlerInterceptorAdapter 클래스를 상속 받아서 구현
+2. interface  HandlerInterceptor 인터페이스를 상속 받아서 구현
+
+* 인터페이스로 생성시 아래 메서드 반드시 오버라이드 해야한다. 각각의 메서드는 인터셉트 시기에 따라 나눠지는 메서드이다.
+⚫ boolean preHandle()  <---보통 이걸 많이 사용
+⚫ void  postHandle()
+⚫ void  afterCompletion()
+
+* 인터셉터 인터페이스로 생성
+public class LoginCheck implements HandlerInterceptor {
+ public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
+ throws Exception {
+ }
+ public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3)
+ throws Exception {
+ }
+ // 지정된 컨트롤러의동작이전에가로채는역할(세션이없으면, 로그인폼으로이동하도록해준다)
+ public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
+ HttpSession session = request.getSession();
+ if (session.getAttribute("id") == null) {
+ response.sendRedirect("loginForm.do");
+ return false;
+ }
+ return true;
+ }
+ }
 
 
 * 파일업로드 방법
