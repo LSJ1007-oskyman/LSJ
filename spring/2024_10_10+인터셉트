@@ -43,6 +43,30 @@ public class LoginCheck implements HandlerInterceptor {
  }
  }
 
+* 파일 업로드 controller
+public String upload(@RequestParam("file") MultipartFile mf, Model model, HttpSession session)
+			throws IllegalStateException, IOException {
+		
+		String fileName = mf.getOriginalFilename();		// 첨부파일명
+		int fileSize = (int) mf.getSize();              // 첨부파일 크기(Byte) 
+		
+		String path = session.getServletContext().getRealPath("/upload");
+		
+//		방법1. 파일 업로드
+//		FileOutputStream fos = new FileOutputStream(path + "/" + fileName);
+//		fos.write(mf.getBytes());
+//		fos.close();
+		
+//		방법2.
+		mf.transferTo(new File(path+"/"+fileName));
+		 
+		System.out.println("path:"+ path);
+		
+		model.addAttribute("fileName", fileName);
+		model.addAttribute("fileSize", fileSize);
+		return "uploadResult";
+}
+
 
 * 파일업로드 방법
 1. pom에 파일업로드 라이브러리넣기
