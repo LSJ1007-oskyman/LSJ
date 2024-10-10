@@ -1,0 +1,4 @@
+@RestController
+1. 스프링 4.x 부터 지원하는 어노테이션
+2. @RestController = @Controller + @ResponseBody
+3. 비동기적으로 데이터 전송
