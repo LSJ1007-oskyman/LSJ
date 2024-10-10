@@ -42,7 +42,7 @@ public class LoginCheck implements HandlerInterceptor {
  return true;
  }
  }
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * 파일 업로드 controller
 public String upload(@RequestParam("file") MultipartFile mf, Model model, HttpSession session)
 			throws IllegalStateException, IOException {
@@ -72,3 +72,33 @@ public String upload(@RequestParam("file") MultipartFile mf, Model model, HttpSe
 1. pom에 파일업로드 라이브러리넣기
 2. upload파일 만들어놓기
 3. form태그에 enctype="multipart/form-data"속성을 해놓고 반드시 post방식으로 전달
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* 테이블에 저장된 컬럼명과 DTO클래스의 필드 이름이 다를떄 MAP을 만들어서 하나하나 매핑해야한다.
+<resultMap id="deptResult"    type="dept">  <-- type="dept" 여기서 dept는 Mybatis환경설정 파일인 configuration파일에 별칭설정 태그에서 온것이다.
+	<result property="deptno" column="deptno" />
+	<result property="dname"  column="dname" />
+	<result property="loc"	  column="loc" />
+</resultMap>
+
+* Mybatis 연결시 root-context 내용
+<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property> 
+	<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+	<property name="username" value="scott"></property>
+	<property name="password" value="tiger"></property>
+</bean>
+
+<!-- HikariCP configuration -->
+<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+	<constructor-arg ref="hikariConfig" />
+</bean>
+
+<!-- 스프링으로 oracle db 연결 -->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"></property>   <---이 코드로 DB연결이 된다.
+	<property name="configLocation" value="classpath:configuration.xml" />  <---configuration 파일 위치
+	<property name="mapperLocations" value="classpath:sql/*.xml" />  <--mapper파일 위치
+</bean>	
+
+
+* join한 결과를 담을 DTO를 생성할때는 JOIN하는 두테이블 중에서 컬럼이 더 많은 테이블에 컬럼을 추가해서 데이터를 저장한다.
