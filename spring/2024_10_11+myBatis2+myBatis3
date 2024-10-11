@@ -1,0 +1,11 @@
+* date클래스로 테이블에 date값으로 저장할때는 sql.date 라이브러리의 date클래스로 해야한다.
+
+myBatis3 project를 import 해보자
+❖환경 설정 파일
+ 1. pom.xml (maven의 환경 설정 파일)
+ 2. web.xml (project의 환경 설정 파일)
+ 3. servlet-context.xml (spring의 환경 설정 파일)
+ 4. root-context.xml ( mapper interface package 추가)
+ 5. configuration.xml (mybatis의 환경 설정 파일)
+ 6. Mapper파일 (Dept.xml, Emp.xml) – namespace에 mapper interface의 path추가
+ 7. DAO 클래스 대신에 mapper interface로 mapper 파일을 실행한다.- mapper interface의 method명과 mapper파일의 id값을 같은 이름으로 설정한다
