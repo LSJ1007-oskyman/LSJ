@@ -5,5 +5,17 @@
 
 private final BoardService service;
 
-* Mybatis의 기능중에 동적SQL기능이 있어서 select시 매우 유용하게 사용이 가능하다.
+* Mybatis의 기능중에 동적쿼리기능이 있어서 select시 매우 유용하게 사용이 가능하다.
+<select id="getTotal" parameterType="board" resultType="int">
+		select count(*) from board 
+		<where>
+			<if test="keyword != null and search !='subcon'">
+				${search} like '%'||#{keyword}||'%'
+			</if>
+			<if test="keyword != null and search=='subcon'">
+				subject like '%'||#{keyword}||'%' or
+				content like '%'||#{keyword}||'%'
+			</if>
+		</where>
+	</select>
 
