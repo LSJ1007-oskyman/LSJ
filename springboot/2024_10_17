@@ -1,0 +1,7 @@
+* 생성자의 매개변수로 DI하는것이 가능하다.
+ - @AUTOWIRED말고 이것도 많이쓴다.
+
+@RequiredArgsConstructor
+
+private final BoardService service;
+
