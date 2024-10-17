@@ -18,4 +18,10 @@ private final BoardService service;
 			</if>
 		</where>
 	</select>
-
+* 한페이지에 2개의 페이지 띄우기
+<script type="text/javascript">
+	$(function() {
+		$('#list').load('list.do?pageNum=${pageNum}');
+	});
+</script>
+<div id="list"></div>
