@@ -25,3 +25,13 @@ private final BoardService service;
 	});
 </script>
 <div id="list"></div>
+
+
+* mapper파일에서 sql한번에 2번실행하기->기본키인 rno값을 squence를 쓰지않고 내부적으로 처리하기 위해서 <selectKey>태그를 통해서 쿼리문을 한번 실행하고 받아온 값을 rno에 넣음
+  - order: sql전에 시작할것인가, 이후에 시작할것인가 정하는 필드
+<insert id="insert" parameterType="rb">
+	<selectKey keyProperty="rno" order="BEFORE" resultType="int">
+		select nvl(max(rno),0) + 1 from replyBoard
+	</selectKey>
+	insert into replyBoard values (#{rno},#{bno},#{replytext},#{replyer},sysdate,sysdate)
+</insert>
