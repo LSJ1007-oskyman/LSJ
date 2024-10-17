@@ -5,3 +5,5 @@
 
 private final BoardService service;
 
+* Mybatis의 기능중에 동적SQL기능이 있어서 select시 매우 유용하게 사용이 가능하다.
+
