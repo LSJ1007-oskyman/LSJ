@@ -1,3 +1,7 @@
 * <th:text> =이후에값 출력(html태그도 문자로 인식해서 출력)
 
-*<th:utext> = 이후에값을 출력 (html태그를 인식해서 그에 알맞은 값을 출력)
+* <th:utext> = 이후에값을 출력 (html태그를 인식해서 그에 알맞은 값을 출력)
+
+* 날짜를 원하는 패턴으로 출력하려면 
+  <td th:text = "${#dates.format(member.regdate,'yyyy-MM-dd HH:mm:ss EEE요일')}"></td>
+  와 같이 입력하면 원하는 패턴으로 출력된다.
