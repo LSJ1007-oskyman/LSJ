@@ -1,0 +1,5 @@
+* 파일 업로드를 위해서는 반드시 라이브러리와 <form>태그에 enctype="multipart/form-data"속성이 반드시 들어가야한다.
+
+* Mybatis는NULL값을 허용하지 않는데 mapper파일에서 변수 값 안에 jdbcType=VARCHAR을 넣어주면 null값이 허용된다.
+
+* 업로드 파일의 중복문제 해결을 위해서 파일 이름을 난수로 처리해야할때 import java.util.UUID;에 UUID uuid = UUID.randomUUID();를 통해서 난수를 받을 수 있다.
