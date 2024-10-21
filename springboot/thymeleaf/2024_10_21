@@ -14,5 +14,5 @@
   <td th:if = "${member.id}">
 			<a href="/Modify" th:if="${member.id==target}">Modify</a>
 			<p th:unless="${member.id==target}">View</p> <!--unless여서 조건식의 반대가 조건이다-->
-	</td>
+  </td>
   와 같이 사용하면된다.
