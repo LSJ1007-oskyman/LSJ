@@ -5,3 +5,14 @@
 * 날짜를 원하는 패턴으로 출력하려면 
   <td th:text = "${#dates.format(member.regdate,'yyyy-MM-dd HH:mm:ss EEE요일')}"></td>
   와 같이 입력하면 원하는 패턴으로 출력된다.
+
+* 변수를 만들고 싶으면
+  th:with="target='u0001'"
+  와 같이 쓰면된다. 범위는 사용된 태그 안까지다.
+ 
+* 조건 문항을 만들고 싶으면
+  <td th:if = "${member.id}">
+			<a href="/Modify" th:if="${member.id==target}">Modify</a>
+			<p th:unless="${member.id==target}">View</p> <!--unless여서 조건식의 반대가 조건이다-->
+	</td>
+  와 같이 사용하면된다.
