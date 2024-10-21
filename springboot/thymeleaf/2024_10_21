@@ -12,7 +12,24 @@
  
 * 조건 문항을 만들고 싶으면
   <td th:if = "${member.id}">
-			<a href="/Modify" th:if="${member.id==target}">Modify</a>
-			<p th:unless="${member.id==target}">View</p> <!--unless여서 조건식의 반대가 조건이다-->
+	<a href="/Modify" th:if="${member.id==target}">Modify</a>
+	<p th:unless="${member.id==target}">View</p> <!--unless여서 조건식의 반대가 조건이다-->
   </td>
   와 같이 사용하면된다.
+* 여러가지 태그와 함수
+  <!-- 1.날짜 관련: #dates -->
+  <h2 th:text = "${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"></h2>
+	
+  <!-- 2.숫자 관련 #numbers --> 
+  <h2 th:text = "${#numbers.formatInteger(price,3,'COMMA')}"></h2>
+	
+  <!-- 3.문자 관련: #strings -->
+  <h1 th:text="${title}"></h1>
+	
+  <!-- replace()함수를 이용해서 s를 진하게 출력 -->
+  <span th:utext="${#strings.replace(title,'s','<b>s</b>')}"></span>
+	
+  <!-- listSplit()함수를 이용해서 title변수의 값을 리스트로 처리하고 출력 -->
+  <ul>
+  	<li th:each="str:${#strings.listSplit(title,'')}">[[${str}]]</li>
+  </ul>
