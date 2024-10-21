@@ -33,3 +33,13 @@
   <ul>
   	<li th:each="str:${#strings.listSplit(title,'')}">[[${str}]]</li>
   </ul>
+* 링크 거는 방법
+  <ul>	<!-- 링크걸기 -->
+	<li><a th:href = "@{http://localhost:80/Sample1}">sample1</a></li>
+	<li><a th:href = "@{/Sample1}">sample1</a></li>
+	<li><a th:href = "@{~/Sample1}">sample1</a></li>
+	
+	<!-- 링크를 통해서 값전달 하기 -->
+	<!-- http://localhost/Thymeleaf/sample1?p1=aaa&p2=bbb -->
+	<li><a th:href = "@{~/Sample1(p1='aaa',p2='bbb')}">sample1</a></li>	
+</ul>
