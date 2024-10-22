@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- javascript안에서 Thymeleaf 사용하기 -->
+	<!-- script태그에서 th:inline="javascript"를 추가하면 script안에서 Thymeleaf를 사용할 수 있다. -->
+	<script th:inline="javascript">
+		var result = [[${result}]];
+		document.write(result);
+	</script>
+	
+	<script>
+		var result = [[${result}]];
+		document.write(result);
+	</script>
+	
+</body>
+</html>

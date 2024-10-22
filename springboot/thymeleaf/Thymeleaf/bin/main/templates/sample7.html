@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>	<!-- 링크걸기 -->
+		<li><a th:href = "@{http://localhost:80/Sample1}">sample1</a></li>
+		<li><a th:href = "@{/Sample1}">sample1</a></li>
+		<li><a th:href = "@{~/Sample1}">sample1</a></li>
+		<!-- 링크를 통해서 값전달 하기 -->
+		<!-- http://localhost/Thymeleaf/sample1?p1=aaa&p2=bbb -->
+		<li><a th:href = "@{~/Sample1(p1='aaa',p2='bbb')}">sample1</a></li>	
+	</ul>
+</body>
+</html>
