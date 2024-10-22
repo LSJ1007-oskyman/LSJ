@@ -1,4 +1,4 @@
 * 루프 돌리는 정형적인 방법
   <span th:each="k : ${#numbers.sequence(1, b.board_re_lev)}">
-	  &nbsp;&nbsp;	
-	</span>		
+  	&nbsp;&nbsp;	
+  </span>		
