@@ -1,0 +1,10 @@
+
+@ResponseBody -> 요청한 곳에 값을 돌려준다는 의미이다.
+
+* RestAPI로 백엔드 처리할때는 요청을 /로 받아야한다.
+  @PostMapping("/boardwrite")
+	@ResponseBody
+
+* 날라오는 요청에 파라미터가 있을 경우 {}로 감싸줘야한다. 
+  @GetMapping("/boardlist/{page}")
+	@ResponseBody
