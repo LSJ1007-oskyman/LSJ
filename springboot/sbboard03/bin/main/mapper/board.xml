@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.BoardDao">
+	<!-- 원문 글작성 -->
+	<insert id="insert" parameterType="board">
+		insert into board53 values(board53_num_seq.nextval,#{board_name},#{board_pass},
+		#{board_subject},#{board_content},board53_num_seq.nextval,
+		0,0,0,sysdate)
+	</insert>
+	
+	<!-- 총데이터 -->
+	<select id="getCount" resultType="int">
+		select count(*) from board53
+	</select>
+	
+	<!-- 게시판 목록 -->
+	<select id="getList" parameterType="int" resultType="board">
+		select * from (select rownum rnum,board.* from 
+		(select * from board53 order by board_re_ref desc,board_re_seq asc) board)
+		where rnum &gt;=((#{page}-1)*10+1) and rnum &lt;= (#{page}*10)
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<update id="hit" parameterType="int">
+		update board53 set board_readcount=board_readcount+1 where board_num=#{board_num}
+	</update>
+	
+	<!-- 상세 정보 -->
+	<select id="board_cont" parameterType="int" resultType="board">
+		select * from board53  where board_num=#{board_num}	
+	</select>
+	
+	<!-- board_re_seq값 1증가 -->
+	<update id="refUpdate" parameterType="board">
+		update board53 
+		set board_re_seq=board_re_seq+1 
+		where board_re_ref=#{board_re_ref} and board_re_seq>#{board_re_seq}
+	</update>
+	
+	<!-- 댓글 작성 -->
+	<insert id="reply" parameterType="board">
+		insert into board53 values(board53_num_seq.nextval,#{board_name},#{board_pass},
+		#{board_subject},#{board_content},#{board_re_ref},#{board_re_lev},
+		#{board_re_seq},0,sysdate)
+	</insert>
+	
+	<!-- 글 수정 -->
+	<update id="update" parameterType="board">
+		update board53 
+		set board_name=#{board_name},board_subject=#{board_subject},board_content=#{board_content}
+		where board_num = #{board_num}
+	</update>
+	
+	<!-- 글 삭제 -->
+	<delete id="delete" parameterType="board">
+		delete from board53
+		where board_num = #{board_num}
+	</delete>
+</mapper>
