@@ -2,6 +2,6 @@
   <span th:each="k : ${#numbers.sequence(1, b.board_re_lev)}">
   	&nbsp;&nbsp;	
   </span>	
-* 값전달시 
+* 값전달시 value대신 th:value로 값을 전달해야한다
   <input type="hidden" name="board_num" th:value="${bcont.board_num}" />
   와 같이 th:value="${bcont.board_num}"로 넣어야 값전달이 된다.
