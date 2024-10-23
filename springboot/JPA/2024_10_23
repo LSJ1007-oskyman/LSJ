@@ -1,5 +1,6 @@
 * JPA설정시 application.properties파일에 
   spring.jpa.hibernate.ddl-auto=update 부분에서 create->매번 새로 생성,create-drop->생성하고 끝날때 삭제 , update->없으면 만들고 있으면 그대로둠 ,none->아무것도 안함
+
 * 알아두어야할 anotation
 @Entity : 해당 클래스를 Entity 클래스로 설정
 @Table(name=“members”) : members 테이블 생성
