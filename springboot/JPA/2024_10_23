@@ -6,3 +6,10 @@
 @Table(name=“members”) : members 테이블 생성
 @Id : 기본키 설정
 
+* repository 상속받는 메서드
+@Repository
+public interface MemberRepository extends JpaRepository<Member, String>{
+// public Member save(Member member); // 회원가입, 정보수정
+// public Optional<Member> findById(String id); // 로그인, 수정폼
+// public void delete(Member member); // 회원탈퇴
+} 
