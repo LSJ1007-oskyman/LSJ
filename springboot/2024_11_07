@@ -1,0 +1,18 @@
+# oracle(x)->hikari를 쓰면 configuration파일을 만들어서 dbconnection을 해야하는데
+#spring.datasource.hikari.driver-class-name=oracle.jdbc.OracleDriver
+#spring.datasource.hikari.jdbc-url=jdbc:oracle:thin:@localhost:1521:xe
+#spring.datasource.hikari.username=spring
+#spring.datasource.hikari.password=spring123
+
+# oracle(o)->이제는 더이상 configurationJAVA파일을 만들 필요없다/
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/xe
+spring.datasource.username=spring
+spring.datasource.password=spring123
+
+#->대신 여기서 model위치와 .mapper파일 위치를 설정해야한다.
+mybatis.type-aliases-package=com.example.demo.model
+mybatis.mapper-locations=classpath:/mapper/*.xml
+
+#->모델에는 보통 caemel로 쓰고 DB에서는 snake형식을 많이사용해서 서로 이름이 다를때 아래 설정을 해야한다.
+#mybatis.configuration.map-underscore-to-camel-case=true
