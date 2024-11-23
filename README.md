@@ -2,7 +2,7 @@
 
 * 포트폴리오 내용은 choongang-project에 있습니다.
 - 실행은 jdk 17이상, sts4 ,tomcat 10.1에서 해주세요
-- 
+  
 
 
 # LSJ
